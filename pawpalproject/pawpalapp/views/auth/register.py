@@ -12,10 +12,10 @@ def register_user(request):
     if request.method == "POST":
 
         new_user = User.objects.create_user(
-            username=request.POST['username']
-            email=request.POST['email']
-            password=request.POST['password']
-            first_name=request.POST['first_name']
+            username=request.POST['username'],
+            email=request.POST['email'],
+            password=request.POST['password'],
+            first_name=request.POST['first_name'],
             last_name=request.POST['last_name']
         )
 

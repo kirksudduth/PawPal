@@ -1,0 +1,10 @@
+{% extends 'shared/base.html' %} {% block content %}
+<h3>L O G I N</h3>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+<p class="no_acct">
+  No account? <a href="{% url 'pawpalapp:register'%}">REGISTER!</a>
+</p>
+{% endblock %}
