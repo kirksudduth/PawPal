@@ -1,0 +1,27 @@
+body {
+  background-color: #24d2f9;
+}
+
+h1 {
+  font-family: "Cutive Mono", serif;
+  font-size: 70px;
+  /* text-align: center; */
+}
+
+h3 {
+  font-family: "Cutive Mono", serif;
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 1px 1px #157b92;
+}
+
+label {
+  font-family: "Cutive Mono", serif;
+}
+p.no_acct {
+  font-family: "Cutive Mono", serif;
+  font-size: 20px;
+}
+button {
+  font-family: "Quicksand", sans-serif;
+}
