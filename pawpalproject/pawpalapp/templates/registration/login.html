@@ -1,7 +1,15 @@
 {% extends 'shared/base.html' %} {% block content %}
 <h3>L O G I N</h3>
-<form method="post">
+<form method="get">
   {% csrf_token %} {{ form.as_p }}
+  <fieldset>
+    <label for="username">Username or Email: </label>
+    <input id="username" type="text" name="username" />
+  </fieldset>
+  <fieldset>
+    <label for="password">Password: </label>
+    <input id="password" type="password" name="password" />
+  </fieldset>
   <button type="submit">Login</button>
 </form>
 <p class="no_acct">
