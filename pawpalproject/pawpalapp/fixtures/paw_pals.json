@@ -1,0 +1,90 @@
+[
+  {
+    "model": "pawpalapp.pawpal",
+    "pk": 1,
+    "fields": {
+      "name": "Allie",
+      "birth_date": "2020-02-20",
+      "favorite_treat": "apples",
+      "favorite_toy": "stuffed alligator",
+      "image": "..images/allie.png"
+    }
+  },
+  {
+    "model": "pawpalapp.pawpal",
+    "pk": 2,
+    "fields": {
+      "name": "Bolster",
+      "birth_date": "2020-01-10",
+      "favorite_treat": "bibimbap",
+      "favorite_toy": "beach ball",
+      "image": "..images/bolster.png"
+    }
+  },
+  {
+    "model": "pawpalapp.pawpal",
+    "pk": 3,
+    "fields": {
+      "name": "Chien",
+      "birth_date": "2018-03-20",
+      "favorite_treat": "cherries",
+      "favorite_toy": "chin strap",
+      "image": "..images/chien.png"
+    }
+  },
+  {
+    "model": "pawpalapp.pawpal",
+    "pk": 4,
+    "fields": {
+      "name": "Dilly",
+      "birth_date": "2017-10-22",
+      "favorite_treat": "dates",
+      "favorite_toy": "dollar bills",
+      "image": "..images/dilly.png"
+    }
+  },
+  {
+    "model": "pawpalapp.pawpal",
+    "pk": 5,
+    "fields": {
+      "name": "Ernesto",
+      "birth_date": "2019-07-12",
+      "favorite_treat": "eggs",
+      "favorite_toy": "eggshells",
+      "image": "..images/ernesto.png"
+    }
+  },
+  {
+    "model": "pawpalapp.pawpal",
+    "pk": 6,
+    "fields": {
+      "name": "Flip",
+      "birth_date": "2017-10-22",
+      "favorite_treat": "figs",
+      "favorite_toy": "five dollar bills",
+      "image": "..images/flip.png"
+    }
+  },
+  {
+    "model": "pawpalapp.pawpal",
+    "pk": 7,
+    "fields": {
+      "name": "Gelatin",
+      "birth_date": "2013-06-07",
+      "favorite_treat": "grits",
+      "favorite_toy": "glassware",
+      "image": "..images/gelatin.png"
+    }
+  },
+  {
+    "model": "pawpalapp.pawpal",
+    "pk": 8,
+    "fields": {
+      "name": "Hugh",
+      "birth_date": "2019-10-30",
+      "favorite_treat": "honey",
+      "favorite_toy": "hibiscus flowers",
+      "image": "..images/hugh.png"
+    }
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "bob",
+      "first_name": "bob",
+      "last_name": "bbobb",
+      "email": "b@b.com",
+      "password": "password123"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "anne",
+      "first_name": "anne",
+      "last_name": "annex",
+      "email": "anne@anne.com",
+      "password": "password1234"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "charley",
+      "first_name": "charley",
+      "last_name": "charlesen",
+      "email": "ch@rley.com",
+      "password": "password1235"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "username": "dill",
+      "first_name": "dill",
+      "last_name": "dighnus",
+      "email": "jdill@isdope.com",
+      "password": "password1236"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "username": "emery",
+      "first_name": "emery",
+      "last_name": "emily",
+      "email": "em@lee.com",
+      "password": "password1237"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "username": "faulk",
+      "first_name": "faulk",
+      "last_name": "fahlter",
+      "email": "f@f.com",
+      "password": "password1238"
+    }
+  }
+]

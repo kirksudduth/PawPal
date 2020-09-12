@@ -1,4 +1,5 @@
 from django.db import models
+from .pawpal import PawPal
 
 class ActivityType(models.Model):
     title = models.CharField(max_length=25)
