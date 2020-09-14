@@ -1,2 +1,2 @@
-DELETE FROM django_migrations
+DELETE FROM pawpalapp_parentpawpal;
 WHERE id = 23;

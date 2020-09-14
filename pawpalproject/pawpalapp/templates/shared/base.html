@@ -14,6 +14,12 @@
   </head>
   <body>
     <h1>PawPal</br>Planner</h1>
+    {% if request.user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'pawpalapp:logout' %}">LOGOUT</a>
+            </li>
+    {% endif %}
     {% block content %}
     {% endblock %}
+  </body>
 </html>

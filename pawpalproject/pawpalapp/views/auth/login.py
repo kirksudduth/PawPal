@@ -11,29 +11,29 @@ def login(request):
     Method arguments:
       request -- The full HTTP request object
     '''
-    if request.method == 'GET':
-        print("REQUEST:", request.body)
-        template = 'registration/login.html'
-        context = {}
+    # if request.method == 'GET':
+    #     print("REQUEST:", request.body)
+    #     template = 'registration/login.html'
+    #     context = {}
 
-        return render(request, template, context)
+    #     return render(request, template, context)
 
 
-    # If the request is a HTTP POST, try to pull out the relevant information.
-    if request.method == 'POST':
-        print("Request:", request.body)
-        req_body = json.loads(request.body.decode())
-        # Use the built-in authenticate method to verify
-        username = req_body['username']
-        password = req_body['password']
-        authenticated_user = authenticate(username=username, password=password)
-        print("AUTH USER:", authenticated_user)
+    # # If the request is a HTTP POST, try to pull out the relevant information.
+    # if request.method == 'POST':
+    #     print("Request:", request.body)
+    #     req_body = json.loads(request.body.decode())
+    #     # Use the built-in authenticate method to verify
+    #     username = req_body['username']
+    #     password = req_body['password']
+    #     authenticated_user = authenticate(username=username, password=password)
+    #     print("AUTH USER:", authenticated_user)
 
-        # If authentication was successful, respond with their token
-        if authenticated_user is not None:
-            token = Token.objects.get(user=authenticated_user)
-            data = json.dumps({"valid": True, "token": token.key})
-            return HttpResponse(data, content_type='application/json')
+    #     # If authentication was successful, respond with their token
+    #     if authenticated_user is not None:
+    #         token = Token.objects.get(user=authenticated_user)
+    #         data = json.dumps({"valid": True, "token": token.key})
+    #         return HttpResponse(data, content_type='application/json')
 
 #         else:
 #             # Bad login details were provided. So we can't log the user in.
