@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pawpalapp',
-    'bootstrap4'
+    'bootstrap4',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -123,4 +124,5 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
 
+CRISPY_TEMPLATE_PACK="bootstrap4"
 
