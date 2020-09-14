@@ -7,7 +7,7 @@ from ...models import ActivityType
 def activity_type_list(request):
     if request.method == 'GET':
 
-        all_activity_types = ActivityType.objects.all()
+        all_activity_types = ActivityType.objects.filter()
         
         template_name = 'activity_types/list.html'
 

@@ -1,1 +1,13 @@
-{% extends 'shared/base.html' %}
+{% extends 'shared/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% block content %} 
+    <h3>Home</h3>
+
+        <div class="activity_type_list">
+        {% for activity_type in all_activity_types %}
+            <div class="activity_type">
+                <button class="button">{{activity_type.title}}
+            </div>
+        {% endfor %}
+        </div>
+    {% endblock%}
