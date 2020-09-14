@@ -7,5 +7,8 @@ app_name = 'pawpalapp'
 
 urlpatterns = [
     path('register/', register_user, name='register'),
-    path('', login, name='login'),
+    path('', activity_type_list, name='home'),
+    path('accounts/', include('django.contrib.auth.urls'), name='login'),
+    # path('', , name='login'),
+
 ]

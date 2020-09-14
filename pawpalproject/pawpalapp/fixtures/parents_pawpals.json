@@ -1,0 +1,98 @@
+[
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 1,
+    "fields": {
+      "parent": 1,
+      "pawpal": 1
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 2,
+    "fields": {
+      "parent": 1,
+      "pawpal": 7
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 3,
+    "fields": {
+      "parent": 2,
+      "pawpal": 2
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 4,
+    "fields": {
+      "parent": 2,
+      "pawpal": 8
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 5,
+    "fields": {
+      "parent": 3,
+      "pawpal": 3
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 6,
+    "fields": {
+      "parent": 4,
+      "pawpal": 4
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 7,
+    "fields": {
+      "parent": 5,
+      "pawpal": 5
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 8,
+    "fields": {
+      "parent": 6,
+      "pawpal": 6
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 9,
+    "fields": {
+      "parent": 7,
+      "pawpal": 1
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 10,
+    "fields": {
+      "parent": 7,
+      "pawpal": 7
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 11,
+    "fields": {
+      "parent": 8,
+      "pawpal": 2
+    }
+  },
+  {
+    "model": "pawpalapp.parentpawpal",
+    "pk": 12,
+    "fields": {
+      "parent": 8,
+      "pawpal": 8
+    }
+  }
+]

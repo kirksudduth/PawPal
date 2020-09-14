@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 # from pawpalapp.models import Parent
 
-
+@csrf_exempt
 def register_user(request):
 
     if request.method == "POST":
@@ -18,12 +18,17 @@ def register_user(request):
             first_name=request.POST['first_name'],
             last_name=request.POST['last_name']
         )
+        
 
         authenticated_user = authenticate(
             username=request.POST['username'], password=request.POST['password'])
 
         if authenticated_user is not None:
+            # token = Token.objects.get(user=authenticated_user)
+            # data = json.dumps({"valid": True, "token": token.key})
+            print("REQUEST:", request)
             login(request, authenticated_user)
+            return HttpResponse(data, content_type='application/json')
 
             return redirect(reverse('pawpalapp:home'))
 
@@ -31,3 +36,4 @@ def register_user(request):
         template = 'registration/register.html'
 
     return render(request, template, {})
+

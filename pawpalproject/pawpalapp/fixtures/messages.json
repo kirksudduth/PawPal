@@ -1,0 +1,372 @@
+[
+  {
+    "model": "pawpalapp.message",
+    "pk": 1,
+    "fields": {
+      "body": "DAMMIT ANNE!! . . . I love you",
+      "when": "2020-09-12",
+      "parent": 1,
+      "pawpal": 1
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 2,
+    "fields": {
+      "body": "glenn needs to get his act together",
+      "when": "2020-09-13",
+      "parent": 1,
+      "pawpal": 1
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 3,
+    "fields": {
+      "body": "surprise, surprise - i'm doing all the work",
+      "when": "2020-09-12",
+      "parent": 1,
+      "pawpal": 7
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 4,
+    "fields": {
+      "body": "Bolster loves to eat rocks and poop",
+      "when": "2020-09-12",
+      "parent": 2,
+      "pawpal": 2
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 5,
+    "fields": {
+      "body": "you'll never die, right???",
+      "when": "2020-09-13",
+      "parent": 2,
+      "pawpal": 2
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 6,
+    "fields": {
+      "body": "Bolster, you make me a better person",
+      "when": "2020-09-12",
+      "parent": 2,
+      "pawpal": 2
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 7,
+    "fields": {
+      "body": "great day to be outside!",
+      "when": "2020-09-12",
+      "parent": 2,
+      "pawpal": 8
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 8,
+    "fields": {
+      "body": "I wish you could talk... maybe",
+      "when": "2020-09-12",
+      "parent": 2,
+      "pawpal": 8
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 9,
+    "fields": {
+      "body": "you were very cute today",
+      "when": "2020-09-12",
+      "parent": 3,
+      "pawpal": 3
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 10,
+    "fields": {
+      "body": "Chien the dog. My fren til the en",
+      "when": "2020-09-12",
+      "parent": 3,
+      "pawpal": 3
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 11,
+    "fields": {
+      "body": "I wish you wouldn't dig holes in the yard",
+      "when": "2020-09-12",
+      "parent": 3,
+      "pawpal": 3
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 12,
+    "fields": {
+      "body": "i hope you enjoyed the walk today",
+      "when": "2020-09-12",
+      "parent": 4,
+      "pawpal": 4
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 13,
+    "fields": {
+      "body": "you freaked out when you saw a squirrel",
+      "when": "2020-09-12",
+      "parent": 4,
+      "pawpal": 4
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 14,
+    "fields": {
+      "body": "may need to rethink the egg diet",
+      "when": "2020-09-12",
+      "parent": 5,
+      "pawpal": 5
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 15,
+    "fields": {
+      "body": "DEFINITELY changing the egg diet",
+      "when": "2020-09-12",
+      "parent": 5,
+      "pawpal": 5
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 16,
+    "fields": {
+      "body": "Flip fetched for fifteen minutes straight",
+      "when": "2020-09-12",
+      "parent": 6,
+      "pawpal": 6
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 17,
+    "fields": {
+      "body": "get outta my hair",
+      "when": "2020-09-12",
+      "parent": 7,
+      "pawpal": 1
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 18,
+    "fields": {
+      "body": "you're being ridiculous",
+      "when": "2020-09-12",
+      "parent": 7,
+      "pawpal": 1
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 19,
+    "fields": {
+      "body": "Anne was acting a bit funny",
+      "when": "2020-09-12",
+      "parent": 7,
+      "pawpal": 1
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 20,
+    "fields": {
+      "body": "Gelatin is getting fat",
+      "when": "2020-09-12",
+      "parent": 7,
+      "pawpal": 7
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 21,
+    "fields": {
+      "body": "maybe less treats",
+      "when": "2020-09-12",
+      "parent": 7,
+      "pawpal": 7
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 22,
+    "fields": {
+      "body": "Hugh's bath was great(not)",
+      "when": "2020-09-12",
+      "parent": 8,
+      "pawpal": 8
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 23,
+    "fields": {
+      "body": "wonderful afternoon with Hugh",
+      "when": "2020-09-12",
+      "parent": 8,
+      "pawpal": 8
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 24,
+    "fields": {
+      "body": "need to clip his nails",
+      "when": "2020-09-12",
+      "parent": 8,
+      "pawpal": 8
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 25,
+    "fields": {
+      "body": "what you thinking, friend?",
+      "when": "2020-09-12",
+      "parent": 5,
+      "pawpal": 5
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 26,
+    "fields": {
+      "body": "stepped in poop becuase you didn't pick it up",
+      "when": "2020-09-12",
+      "parent": 1,
+      "pawpal": 7
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 27,
+    "fields": {
+      "body": "liar!! i pick up all poop!!",
+      "when": "2020-09-12",
+      "parent": 7,
+      "pawpal": 7
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 28,
+    "fields": {
+      "body": "we are so insignificant, haha",
+      "when": "2020-09-12",
+      "parent": 4,
+      "pawpal": 4
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 29,
+    "fields": {
+      "body": "Congrats on your service dog cert!",
+      "when": "2020-09-12",
+      "parent": 3,
+      "pawpal": 3
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 30,
+    "fields": {
+      "body": "you are the best doggo evr",
+      "when": "2020-09-12",
+      "parent": 5,
+      "pawpal": 5
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 31,
+    "fields": {
+      "body": "good cuddle session today",
+      "when": "2020-09-12",
+      "parent": 2,
+      "pawpal": 8
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 32,
+    "fields": {
+      "body": "you help me love myself",
+      "when": "2020-09-12",
+      "parent": 6,
+      "pawpal": 6
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 33,
+    "fields": {
+      "body": "sorry for being a jerk :|",
+      "when": "2020-09-12",
+      "parent": 1,
+      "pawpal": 7
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 34,
+    "fields": {
+      "body": "it was my fault. i put the poop there on purpose. i also forgive you",
+      "when": "2020-09-12",
+      "parent": 7,
+      "pawpal": 7
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 35,
+    "fields": {
+      "body": "wyd??",
+      "when": "2020-09-12",
+      "parent": 2,
+      "pawpal": 2
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 36,
+    "fields": {
+      "body": "chillin u?",
+      "when": "2020-09-12",
+      "parent": 8,
+      "pawpal": 2
+    }
+  },
+  {
+    "model": "pawpalapp.message",
+    "pk": 37,
+    "fields": {
+      "body": "Ernesto, you are a shining light",
+      "when": "2020-09-12",
+      "parent": 5,
+      "pawpal": 5
+    }
+  }
+]
