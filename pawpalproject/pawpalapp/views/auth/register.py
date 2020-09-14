@@ -24,8 +24,9 @@ def register_user(request):
             username=request.POST['username'], password=request.POST['password'])
 
         if authenticated_user is not None:
-            token = Token.objects.get(user=authenticated_user)
-            data = json.dumps({"valid": True, "token": token.key})
+            # token = Token.objects.get(user=authenticated_user)
+            # data = json.dumps({"valid": True, "token": token.key})
+            print("REQUEST:", request)
             login(request, authenticated_user)
             return HttpResponse(data, content_type='application/json')
 

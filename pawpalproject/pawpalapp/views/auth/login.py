@@ -12,6 +12,7 @@ def login(request):
       request -- The full HTTP request object
     '''
     if request.method == 'GET':
+        print("REQUEST:", request.body)
         template = 'registration/login.html'
         context = {}
 
