@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.templatetags.static',
     'pawpalapp',
     'bootstrap4',
+    'bootstrap4_nav',
     'crispy_forms',
 ]
 
@@ -125,4 +127,8 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+BOOTSTRAP4_SITE_NAME = 'PawPal'
+
+BOOTSTRAP4_TITLE = 'PawPal'
 

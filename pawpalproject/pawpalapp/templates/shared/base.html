@@ -16,7 +16,21 @@
     {% block css %} {% endblock %}
   </head>
   <body>
-    <h1>PawPal</h1>
+    <header>
+    <nav class="navbar navbar-expand-md sticky-top">
+    <a class="navbar-brand" href="#">PawPal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#PawPal" aria-controls="navbarText" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i>
+    </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto nav">
+    <li class="nav-item">
+    <a class="nav-link" href="#">Home</a>
+    </li>
+    </header>
     {% if request.user.is_authenticated %}
     <li class="nav-item">
       <a class="nav-link" href="{% url 'pawpalapp:logout' %}">LOGOUT</a>
