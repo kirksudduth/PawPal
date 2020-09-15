@@ -1,13 +1,20 @@
 {% extends 'shared/base.html' %} {% load static %} {% block css %}
 <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
-{% endblock %} {% block content %} 
-    <h3>Home</h3>
+{% endblock %} {% block content %}
+<h3>Home</h3>
 
-        <div class="activity_type_list">
-        {% for activity_type in all_activity_types %}
-            <div class="activity_type">
-                <button class="button">{{activity_type.title}}
-            </div>
-        {% endfor %}
-        </div>
-    {% endblock%}
+<div class="activity_type_list">
+  {% for activity_type in list_view.all_activity_types %}
+  <div class="activity_type">
+    <button class="button">
+      {{activity_type.title}} {{activity_type.pawPal.name}}
+    </button>
+    {% for activity in list_view.all_activities %}
+    <div class="activity_note">
+      <p class="note">{{activity.note}}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+{% endblock%}

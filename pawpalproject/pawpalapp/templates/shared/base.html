@@ -1,4 +1,4 @@
-{% load static %} {% load bootstrap4 %}
+{% load static %} {% load bootstrap4_nav %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,24 +17,49 @@
   </head>
   <body>
     <header>
-    <nav class="navbar navbar-expand-md sticky-top">
-    <a class="navbar-brand" href="#">PawPal</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-    data-target="#PawPal" aria-controls="navbarText" aria-expanded="false"
-    aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i>
-    </span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto nav">
-    <li class="nav-item">
-    <a class="nav-link" href="#">Home</a>
-    </li>
+      {% block nav %}
+      <nav class="navbar navbar-expand-md sticky-top">
+        <a class="navbar-brand" href="#">PawPal</a>
+        {% if request.user.is_authenticated %}
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="PawPal"
+          aria-controls="PawPal"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><i class="fas fa-bars hamburger"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add PawPal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Find PawPal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Message Board</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'pawpalapp:logout' %}">Logout</a>
+            </li>
+          </ul>
+        </div>
+        {% endif %}
+      </nav>
+      {% endblock %}
     </header>
-    {% if request.user.is_authenticated %}
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'pawpalapp:logout' %}">LOGOUT</a>
-    </li>
-    {% endif %} {% block content %} {% endblock %}
+    {% block content %} {% endblock %}
   </body>
 </html>
