@@ -6,9 +6,8 @@ from .views import *
 app_name = 'pawpalapp'
 
 urlpatterns = [
-    path('register/', register_user, name='register'),
+    path('register/', register, name='register'),
     path('', activity_type_list, name='home'),
     path('accounts/', include('django.contrib.auth.urls'), name='login'),
-    # path('', , name='login'),
-
+    path('logout/', logout_user, name='logout'),
 ]

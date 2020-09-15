@@ -7,7 +7,7 @@
       "first_name": "bob",
       "last_name": "bbobb",
       "email": "b@b.com",
-      "password": "pbkdf2_sha256$216000$fgWRL15aX5Ko$8alMAXiCiqMkqF3VWWrBx5TpQNMLpD9mK0uUHXPhlAg=",
+      "password": "pbkdf2_sha256$216000$ldo8fvOcXFfq$udHWwBXJK8Hf+Dtnfa+kv8MByhcoRWoohOa1sHFUEuw=",
       "is_superuser": 1
     }
   },
@@ -19,7 +19,7 @@
       "first_name": "anne",
       "last_name": "annex",
       "email": "anne@anne.com",
-      "password": "pbkdf2_sha256$216000$fgWRL15aX5Ko$8alMAXiCiqMkqF3VWWrBx5TpQNMLpD9mK0uUHXPhlAg="
+      "password": "pbkdf2_sha256$216000$ldo8fvOcXFfq$udHWwBXJK8Hf+Dtnfa+kv8MByhcoRWoohOa1sHFUEuw="
     }
   },
   {
@@ -30,7 +30,7 @@
       "first_name": "charley",
       "last_name": "charlesen",
       "email": "ch@rley.com",
-      "password": "pbkdf2_sha256$216000$fgWRL15aX5Ko$8alMAXiCiqMkqF3VWWrBx5TpQNMLpD9mK0uUHXPhlAg="
+      "password": "pbkdf2_sha256$216000$ldo8fvOcXFfq$udHWwBXJK8Hf+Dtnfa+kv8MByhcoRWoohOa1sHFUEuw="
     }
   },
   {
@@ -41,7 +41,7 @@
       "first_name": "dill",
       "last_name": "dighnus",
       "email": "jdill@isdope.com",
-      "password": "pbkdf2_sha256$216000$fgWRL15aX5Ko$8alMAXiCiqMkqF3VWWrBx5TpQNMLpD9mK0uUHXPhlAg="
+      "password": "pbkdf2_sha256$216000$ldo8fvOcXFfq$udHWwBXJK8Hf+Dtnfa+kv8MByhcoRWoohOa1sHFUEuw="
     }
   },
   {
@@ -52,7 +52,7 @@
       "first_name": "emery",
       "last_name": "emily",
       "email": "em@lee.com",
-      "password": "pbkdf2_sha256$216000$fgWRL15aX5Ko$8alMAXiCiqMkqF3VWWrBx5TpQNMLpD9mK0uUHXPhlAg="
+      "password": "pbkdf2_sha256$216000$ldo8fvOcXFfq$udHWwBXJK8Hf+Dtnfa+kv8MByhcoRWoohOa1sHFUEuw="
     }
   },
   {
@@ -63,7 +63,7 @@
       "first_name": "faulk",
       "last_name": "fahlter",
       "email": "f@f.com",
-      "password": "pbkdf2_sha256$216000$fgWRL15aX5Ko$8alMAXiCiqMkqF3VWWrBx5TpQNMLpD9mK0uUHXPhlAg="
+      "password": "pbkdf2_sha256$216000$ldo8fvOcXFfq$udHWwBXJK8Hf+Dtnfa+kv8MByhcoRWoohOa1sHFUEuw="
     }
   },
   {
@@ -74,7 +74,7 @@
       "first_name": "glenn",
       "last_name": "green",
       "email": "g@g.com",
-      "password": "pbkdf2_sha256$216000$fgWRL15aX5Ko$8alMAXiCiqMkqF3VWWrBx5TpQNMLpD9mK0uUHXPhlAg="
+      "password": "pbkdf2_sha256$216000$ldo8fvOcXFfq$udHWwBXJK8Hf+Dtnfa+kv8MByhcoRWoohOa1sHFUEuw="
     }
   },
   {
@@ -85,7 +85,7 @@
       "first_name": "hanie",
       "last_name": "hilliard",
       "email": "h@h.com",
-      "password": "pbkdf2_sha256$216000$fgWRL15aX5Ko$8alMAXiCiqMkqF3VWWrBx5TpQNMLpD9mK0uUHXPhlAg="
+      "password": "pbkdf2_sha256$216000$ldo8fvOcXFfq$udHWwBXJK8Hf+Dtnfa+kv8MByhcoRWoohOa1sHFUEuw="
     }
   }
 ]
