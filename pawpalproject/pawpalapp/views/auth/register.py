@@ -15,6 +15,10 @@ def register(request):
         if form.is_valid():
             form.save()
 
+            authenticated_user = authenticate(username=request.POST['username'], password=request.POST['password1'])
+            
+            login(request, authenticated_user)
+
             return redirect("/")
 
     else:

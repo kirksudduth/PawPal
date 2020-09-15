@@ -6,6 +6,7 @@ from ...models import ActivityType
 @login_required
 def activity_type_list(request):
     if request.method == 'GET':
+        print("USER:", request.user.id)
         # add pawPal_id=request.user.id ?? in filter.() OR something like that
         all_activity_types = ActivityType.objects.filter()
         

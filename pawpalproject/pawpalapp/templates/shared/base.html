@@ -1,25 +1,26 @@
-{% load static %}
+{% load static %} {% load bootstrap4 %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>PawPal</title>
-    <link rel='stylesheet' href="{% static 'styles/base.css' %}" />
-    <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Cutive+Mono">
-  <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Quicksand">
-    {% block css %}
-    {% endblock %}
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cutive+Mono"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+    />
+    {% block css %} {% endblock %}
   </head>
   <body>
-    <h1>PawPal</br>Planner</h1>
+    <h1>PawPal</h1>
     {% if request.user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'pawpalapp:logout' %}">LOGOUT</a>
-            </li>
-    {% endif %}
-    {% block content %}
-    {% endblock %}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'pawpalapp:logout' %}">LOGOUT</a>
+    </li>
+    {% endif %} {% block content %} {% endblock %}
   </body>
 </html>
