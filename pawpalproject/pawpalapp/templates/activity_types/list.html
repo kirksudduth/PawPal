@@ -5,9 +5,9 @@
 
 <div class="activity_type_list">
   {% for activity_type in list_view.all_activity_types %}
-  <div class="activity_type">
+  <div class="activity_type" id="{{activity_type.id}}">
     <button class="button">
-      {{activity_type.title}} {{activity_type.pawPal.name}}
+      {{activity_type.title}} {{activity_type.pawpal.name}}
     </button>
     {% for activity in list_view.all_activities %}
     <div class="activity_note">
