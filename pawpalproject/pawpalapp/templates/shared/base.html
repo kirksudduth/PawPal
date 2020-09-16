@@ -1,4 +1,4 @@
-{% load static %} {% load bootstrap4_nav %}
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,6 +12,12 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Quicksand"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
     />
     {% block css %} {% endblock %}
   </head>
@@ -43,7 +49,9 @@
               <a class="nav-link" href="#">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Add PawPal</a>
+              <a class="nav-link" href="{% url 'pawpalapp:add_pawpal' %}"
+                >Add PawPal</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Find PawPal</a>

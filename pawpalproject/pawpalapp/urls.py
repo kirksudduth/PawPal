@@ -10,4 +10,5 @@ urlpatterns = [
     path('', activity_type_list, name='home'),
     path('accounts/', include('django.contrib.auth.urls'), name='login'),
     path('logout/', logout_user, name='logout'),
+    path('pawpals/add', create_pawpal, name='add_pawpal'),
 ]
