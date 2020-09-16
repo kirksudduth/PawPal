@@ -1,0 +1,18 @@
+{% extends 'shared/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% block content %}
+<h3>Hi, {{ profile_view.parent.user.username }}!</h3>
+<div class="profile_info">
+  <ul>
+    <li class="username">Username: {{ profile_view.parent.user.username }}</li>
+    <li class="email">Email: {{ profile_view.parent.user.email }}</li>
+  </ul>
+</div>
+<div class="pawpals">
+  {% for pawpal in profile_view.pawpals%}
+  <div class="pawpal">
+    <h5>{{ pawpal.name }}</h5>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

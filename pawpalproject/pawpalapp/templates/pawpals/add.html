@@ -1,5 +1,7 @@
-{% extends 'shared/base.html' %} {% block title %}Add Pawpal{% endblock %} {%
-load crispy_forms_tags %} {% block content %}
+{% extends 'shared/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% block title %}Add Pawpal{% endblock %} {%load
+crispy_forms_tags %} {% block content %}
 <form method="POST" class="form-group">
   {{ form }}
   <button type="submit" class="btn btn-success">Add Pawpal</button>

@@ -7,7 +7,6 @@ from ...models import ActivityType, Activity, ParentPawPal
 def activity_type_list(request):
     if request.method == 'GET':
         parent_pawpal_set = ParentPawPal.objects.filter(parent_id=request.user.id)
-        print("What is this?", parent_pawpal_set)
         list_view = {}
         list_view['all_activity_types'] = ActivityType.objects.filter(pawpal_id=parent_pawpal_set[0].pawpal_id)
         list_view['all_activities'] = Activity.objects.filter(pawpal_id=parent_pawpal_set[0].pawpal_id)
