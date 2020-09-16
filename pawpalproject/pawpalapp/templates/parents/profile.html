@@ -1,18 +1,33 @@
 {% extends 'shared/base.html' %} {% load static %} {% block css %}
 <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
 {% endblock %} {% block content %}
-<h3>Hi, {{ profile_view.parent.user.username }}!</h3>
 <div class="profile_info">
+  <h3>Profile Info</h3>
   <ul>
     <li class="username">Username: {{ profile_view.parent.user.username }}</li>
     <li class="email">Email: {{ profile_view.parent.user.email }}</li>
   </ul>
+  <a
+    button
+    type="button"
+    class="btn btn-success"
+    href="{% url 'pawpalapp:profile_edit' %}"
+    >Edit Profile</a
+  >
 </div>
 <div class="pawpals">
-  {% for pawpal in profile_view.pawpals%}
+  <h4>Your PawPals!</h4>
+  {% for pawpal in profile_view.parent_pawpals%}
   <div class="pawpal">
-    <h5>{{ pawpal.name }}</h5>
+    <h5>{{ pawpal.pawpal.name }}</h5>
   </div>
   {% endfor %}
+  <a
+    button
+    type="button"
+    class="btn btn-success"
+    href="{% url 'pawpalapp:add_pawpal' %}"
+    >Add PawPal</a
+  >
 </div>
 {% endblock %}

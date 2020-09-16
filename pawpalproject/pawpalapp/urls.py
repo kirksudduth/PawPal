@@ -12,4 +12,5 @@ urlpatterns = [
     path('logout/', logout_user, name='logout'),
     path('pawpals/add', create_pawpal, name='add_pawpal'),
     path('profile/', profile, name='profile'),
+    path('profile/edit', profile_edit, name='profile_edit'),
 ]

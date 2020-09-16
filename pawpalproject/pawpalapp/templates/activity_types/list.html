@@ -9,7 +9,8 @@
     <button class="button">
       {{activity_type.title}} {{activity_type.pawpal.name}}
     </button>
-    {% for activity in list_view.all_activities %}
+    {% for activity in list_view.Feed %} {% comment %} #want this to dynamically
+    render!!!! {% endcomment %}
     <div class="activity_note">
       <p class="note">{{activity.note}}</p>
     </div>
