@@ -25,28 +25,28 @@
     <header>
       {% block nav %}
       <nav class="navbar navbar-expand-md sticky-top">
-        <a class="navbar-brand" href="#">PawPal</a>
+        <a class="navbar-brand" href="{% url 'pawpalapp:home' %}">PawPal</a>
         {% if request.user.is_authenticated %}
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="PawPal"
-          aria-controls="PawPal"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"
-            ><i class="fas fa-bars hamburger"></i>
-          </span>
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mr-auto nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="{% url 'pawpalapp:home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+              <a class="nav-link" href="{% url 'pawpalapp:profile' %}"
+                >Profile</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'pawpalapp:add_pawpal' %}"
