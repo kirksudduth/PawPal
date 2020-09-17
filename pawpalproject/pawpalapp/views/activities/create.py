@@ -18,10 +18,10 @@ def create_activity(request, activity_type_id):
             parent_id = parent.id,
             pawpal_id = pawpal.id
         )
+        
+        return redirect(reverse('pawpalapp:activity_type_details', args=[activity_type_id]))
 
-        return redirect("/")
     else:
-        form = AddActivityForm()
         parent_pawpal = ParentPawPal.objects.filter(parent_id=request.user.id)
         pawpal = PawPal.objects.get(id=parent_pawpal[0].pawpal_id)
         activity_type = ActivityType.objects.get(id=activity_type_id)
