@@ -15,4 +15,5 @@ urlpatterns = [
     path('profile/edit', profile_edit, name='profile_edit'),
     path('activity_types/<int:activity_type_id>', activity_type_details, name='activity_type_details'),
     path('activity_types/<int:activity_type_id>/add_activity', create_activity, name='add_activity'),
+    # path('activity_types/<int:activity_type_id>/edit_activity', edit_activity, name='edit_activity'),
 ]
