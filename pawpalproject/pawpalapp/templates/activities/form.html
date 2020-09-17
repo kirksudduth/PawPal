@@ -1,0 +1,13 @@
+{% extends 'shared/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% block content %}
+<h3>Add Activity for {{pawpal.name}}</h3>
+  <form method="POST" class="form-group">
+    <fieldset>
+      <label for="note">Note: </label>
+      <input id="note" type="text" name="note" value="{{ activity.note }}" />
+    </fieldset>
+    <button type="submit" class="btn btn-success">{{activity_type.title}}</button>
+  </form>
+  {% endblock %}
+</h3>

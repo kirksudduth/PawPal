@@ -1,2 +1,2 @@
-delete from pawpalapp_pawpal
-where name like 'Jowls';
+delete from pawpalapp_activity
+where id = 33;

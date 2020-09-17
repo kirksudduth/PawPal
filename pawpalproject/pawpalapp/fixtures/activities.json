@@ -3,7 +3,7 @@
     "model": "pawpalapp.activity",
     "pk": 1,
     "fields": {
-      "note": "Anne ate an assortment of apples",
+      "note": "Allie ate an assortment of apples",
       "when": "2020-09-12",
       "activity_type": 1,
       "parent": 1,
@@ -16,7 +16,7 @@
     "fields": {
       "note": "Bolster binged on a bowl of bibimbap",
       "when": "2020-09-11",
-      "activity_type": 1,
+      "activity_type": 7,
       "parent": 2,
       "pawpal": 2
     }
@@ -27,7 +27,7 @@
     "fields": {
       "note": "Chien chewed curiously on cherries",
       "when": "2020-09-12",
-      "activity_type": 1,
+      "activity_type": 13,
       "parent": 3,
       "pawpal": 3
     }
@@ -38,7 +38,7 @@
     "fields": {
       "note": "Dilly devoured dates at dawn",
       "when": "2020-09-12",
-      "activity_type": 1,
+      "activity_type": 19,
       "parent": 4,
       "pawpal": 4
     }
@@ -49,7 +49,7 @@
     "fields": {
       "note": "Ernesto eagerly engorged himself on eggs",
       "when": "2020-09-12",
-      "activity_type": 1,
+      "activity_type": 25,
       "parent": 5,
       "pawpal": 5
     }
@@ -60,7 +60,7 @@
     "fields": {
       "note": "Flip found figs frighteningly filling this Friday",
       "when": "2020-09-12",
-      "activity_type": 1,
+      "activity_type": 31,
       "parent": 6,
       "pawpal": 6
     }
@@ -71,7 +71,7 @@
     "fields": {
       "note": "Gelatin gobbled grits grinningly",
       "when": "2020-09-12",
-      "activity_type": 1,
+      "activity_type": 37,
       "parent": 1,
       "pawpal": 7
     }
@@ -82,7 +82,7 @@
     "fields": {
       "note": "Hugh hungrily hunched over his honey",
       "when": "2020-09-12",
-      "activity_type": 1,
+      "activity_type": 43,
       "parent": 2,
       "pawpal": 8
     }
@@ -91,7 +91,7 @@
     "model": "pawpalapp.activity",
     "pk": 9,
     "fields": {
-      "note": "Anne peed and pooped!",
+      "note": "Allie peed and pooped!",
       "when": "2020-09-12",
       "activity_type": 2,
       "parent": 7,
@@ -104,7 +104,7 @@
     "fields": {
       "note": "Bolster barfed",
       "when": "2020-09-12",
-      "activity_type": 2,
+      "activity_type": 8,
       "parent": 8,
       "pawpal": 2
     }
@@ -115,7 +115,7 @@
     "fields": {
       "note": "Chien chased critters and didn't use the bathroom",
       "when": "2020-09-12",
-      "activity_type": 2,
+      "activity_type": 14,
       "parent": 3,
       "pawpal": 3
     }
@@ -126,7 +126,7 @@
     "fields": {
       "note": "Dilly dallied but eventually took care of business",
       "when": "2020-09-12",
-      "activity_type": 2,
+      "activity_type": 20,
       "parent": 4,
       "pawpal": 4
     }
@@ -137,7 +137,7 @@
     "fields": {
       "note": "sniffed around the whole yard",
       "when": "2020-09-12",
-      "activity_type": 2,
+      "activity_type": 26,
       "parent": 5,
       "pawpal": 5
     }
@@ -148,7 +148,7 @@
     "fields": {
       "note": "i wish you would just do your thing",
       "when": "2020-09-12",
-      "activity_type": 2,
+      "activity_type": 32,
       "parent": 6,
       "pawpal": 6
     }
@@ -159,7 +159,7 @@
     "fields": {
       "note": "ran after a jogger",
       "when": "2020-09-12",
-      "activity_type": 2,
+      "activity_type": 38,
       "parent": 7,
       "pawpal": 7
     }
@@ -170,7 +170,7 @@
     "fields": {
       "note": "made some friends with a bunny",
       "when": "2020-09-12",
-      "activity_type": 2,
+      "activity_type": 44,
       "parent": 8,
       "pawpal": 8
     }
@@ -192,7 +192,7 @@
     "fields": {
       "note": "sniffed every mailbox and peed on every other",
       "when": "2020-09-12",
-      "activity_type": 3,
+      "activity_type": 9,
       "parent": 8,
       "pawpal": 2
     }
@@ -203,7 +203,7 @@
     "fields": {
       "note": "had to carry him the last half of the walk",
       "when": "2020-09-12",
-      "activity_type": 3,
+      "activity_type": 15,
       "parent": 3,
       "pawpal": 3
     }
@@ -214,7 +214,7 @@
     "fields": {
       "note": "walked around the park and ate some geese poop",
       "when": "2020-09-12",
-      "activity_type": 3,
+      "activity_type": 21,
       "parent": 4,
       "pawpal": 4
     }
@@ -225,7 +225,7 @@
     "fields": {
       "note": "jumped into the creek while we were on the walk",
       "when": "2020-09-12",
-      "activity_type": 3,
+      "activity_type": 27,
       "parent": 5,
       "pawpal": 5
     }
@@ -236,7 +236,7 @@
     "fields": {
       "note": "loved every second of the walk through the forest",
       "when": "2020-09-12",
-      "activity_type": 3,
+      "activity_type": 33,
       "parent": 6,
       "pawpal": 6
     }
@@ -247,7 +247,7 @@
     "fields": {
       "note": "it was hoOOoot",
       "when": "2020-09-12",
-      "activity_type": 3,
+      "activity_type": 39,
       "parent": 7,
       "pawpal": 7
     }
@@ -258,7 +258,7 @@
     "fields": {
       "note": "started to rain, but it was still fun",
       "when": "2020-09-12",
-      "activity_type": 3,
+      "activity_type": 45,
       "parent": 2,
       "pawpal": 8
     }
@@ -280,7 +280,7 @@
     "fields": {
       "note": "made a mess of the bathroom",
       "when": "2020-09-12",
-      "activity_type": 4,
+      "activity_type": 10,
       "parent": 8,
       "pawpal": 2
     }
@@ -291,7 +291,7 @@
     "fields": {
       "note": "looks great, smells great",
       "when": "2020-09-12",
-      "activity_type": 4,
+      "activity_type": 16,
       "parent": 3,
       "pawpal": 3
     }
@@ -302,7 +302,7 @@
     "fields": {
       "note": "tried to run away the whole time",
       "when": "2020-09-12",
-      "activity_type": 4,
+      "activity_type": 22,
       "parent": 4,
       "pawpal": 4
     }
@@ -313,7 +313,7 @@
     "fields": {
       "note": "washed at friend's house and it went great",
       "when": "2020-09-12",
-      "activity_type": 4,
+      "activity_type": 28,
       "parent": 5,
       "pawpal": 5
     }
@@ -324,7 +324,7 @@
     "fields": {
       "note": "new shampoo -- hated it",
       "when": "2020-09-12",
-      "activity_type": 4,
+      "activity_type": 34,
       "parent": 6,
       "pawpal": 6
     }
@@ -335,7 +335,7 @@
     "fields": {
       "note": "washed, dried and fluffed",
       "when": "2020-09-12",
-      "activity_type": 4,
+      "activity_type": 40,
       "parent": 7,
       "pawpal": 7
     }
@@ -346,7 +346,7 @@
     "fields": {
       "note": "washed and immediately rolled in the dirt after",
       "when": "2020-09-12",
-      "activity_type": 4,
+      "activity_type": 46,
       "parent": 8,
       "pawpal": 8
     }

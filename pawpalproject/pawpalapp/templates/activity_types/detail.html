@@ -1,0 +1,26 @@
+{% extends 'shared/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% block content %}
+
+<h3>{{activity_type.title}}!</h3>
+<a
+  type="button"
+  button
+  class="btn btn-success"
+  href="{% url 'pawpalapp:add_activity' activity_type.id %}"
+  >{{activity_type.title}}</a
+>
+<div class="recent_activity_list">
+  <h6>Most Recent</h6>
+  {% for activity in activities %}
+  <div class="activity" id="{{activity.id}}">
+    <p>When: {{activity.when}}</p>
+    <p>Notes: {{activity.note}}</p>
+  </div>
+  <button class="btn btn-success">Edit</button>
+  <button class="btn btn-danger">Delete</button>
+
+  {% endfor %}
+</div>
+
+{% endblock %}

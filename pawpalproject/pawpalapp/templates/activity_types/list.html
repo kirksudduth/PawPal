@@ -6,10 +6,16 @@
 <div class="activity_type_list">
   {% for activity_type in list_view.all_activity_types %}
   <div class="activity_type" id="{{activity_type.id}}">
-    <button class="button">
-      {{activity_type.title}} {{activity_type.pawpal.name}}
-    </button>
-    {% for activity in list_view.Feed %} {% comment %} #want this to dynamically
+    {% csrf_token %}
+    <form
+      action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
+      method="GET"
+    >
+      <button class="button">
+        {{activity_type.title}} {{activity_type.pawpal.name}}
+      </button>
+    </form>
+    {% for activity in list_view. %} {% comment %} #want this to dynamically
     render!!!! {% endcomment %}
     <div class="activity_note">
       <p class="note">{{activity.note}}</p>
