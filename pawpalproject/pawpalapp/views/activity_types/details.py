@@ -31,4 +31,9 @@ def activity_type_details(request, activity_type_id):
         
             return redirect(reverse('pawpalapp:activity_type_details', args=[activity_type_id]))
 
-            
+        if (
+            "actual_method" in form_data and form_data['actual_method'] == "PUT"
+        ):
+            Activity.objects.get(id=int(form_data['id'])).update()  
+
+            return redirect(reverse('pawpalapp:activity_type_details', args=[activity_type_id]))
