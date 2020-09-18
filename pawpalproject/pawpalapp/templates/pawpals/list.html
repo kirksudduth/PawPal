@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PawPal</title>
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cutive+Mono"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    {% block css %} {% endblock %}
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-md sticky-top">
+        <a class="navbar-brand" href="{% url 'pawpalapp:home' %}">PawPal</a>
+    </header>
+    {% if parent_pawpal_list %}
+    {% for pawpal in parent_pawpal_list%}
+        <div class="pawpal" id="{{pawpal.pawpal.id}}">
+        <img src="{{pawpal.pawpal.image}}" alt="{{pawpal.pawpal.name}}"/>
+        <p>{{pawpal.pawpal.namej}}</p>
+        </div>
+        <a
+        button
+        type="button"
+        class="btn btn-success"
+        href="{% url 'pawpalapp:pawpal_details' pawpal.pawpal.id %}">Do Stuff with {{pawpal.pawpal.name}}</a>
+        {% endfor %}
+    {% else %}
+    <h3>Add Pawpal or Search for PawPal</h3>
+    <div>
+    <a
+    button
+    type="button"
+    class="btn btn-success"
+    href="{% url 'pawpalapp:add_pawpal' %}"
+    >Add PawPal</a
+  >
+    <a
+    button
+    type="button"
+    class="btn btn-success"
+    href="{% url 'pawpalapp:find_pawpal' %}"
+    >Find Pawpal</a>
+    {% endif %}
+
+  </body>
