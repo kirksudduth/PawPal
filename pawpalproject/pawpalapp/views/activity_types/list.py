@@ -5,7 +5,7 @@ from ...models import ActivityType, Activity, ParentPawPal
 
 @login_required
 def activity_type_list(request):
-    if request.method == 'GET':
+    if request.method == "GET":
         parent_pawpal_set = ParentPawPal.objects.filter(parent_id=request.user.id)
         list_view = {}
         list_view['all_activity_types'] = list(ActivityType.objects.filter(pawpal_id=parent_pawpal_set[0].pawpal_id))
@@ -36,3 +36,4 @@ def activity_type_list(request):
     #     form_data = request.POST
 
     #     new_activity_type = ActivityType()
+
