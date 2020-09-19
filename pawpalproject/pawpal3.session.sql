@@ -1,2 +1,2 @@
-delete from pawpalapp_activity
-where id = 33;
+delete from pawpalapp_parentpawpal
+where id = 15;

@@ -36,7 +36,9 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          <span class="navbar-toggler-icon"
+            ><i class="fas fa-bars hamburger"></i
+          ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mr-auto nav">
@@ -54,7 +56,9 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Find PawPal</a>
+              <a class="nav-link" href="{% url 'pawpalapp:find_pawpal' %}"
+                >Find PawPal</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Message Board</a>

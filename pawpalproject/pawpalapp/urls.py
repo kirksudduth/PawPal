@@ -7,13 +7,15 @@ app_name = 'pawpalapp'
 
 urlpatterns = [
     path('register/', register, name='register'),
-    path('', activity_type_list, name='home'),
+    # path('', activity_type_list, name='home'),
     path('accounts/', include('django.contrib.auth.urls'), name='login'),
     path('logout/', logout_user, name='logout'),
     path('pawpals/add', create_pawpal, name='add_pawpal'),
+    path('', pawpal_list, name='home'),
+    path('pawpals/find', find_pawpal, name='find_pawpal'),
+    path('pawpals/<int:pawpal_id>', pawpal_details, name='pawpal_details'),
     path('profile/', profile, name='profile'),
     path('profile/edit', profile_edit, name='profile_edit'),
     path('activity_types/<int:activity_type_id>', activity_type_details, name='activity_type_details'),
     path('activity_types/<int:activity_type_id>/add_activity', create_activity, name='add_activity'),
-    # path('activity_types/<int:activity_type_id>/edit_activity', edit_activity, name='edit_activity'),
 ]

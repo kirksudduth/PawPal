@@ -1,9 +1,13 @@
 {% extends 'shared/base.html' %} {% load static %} {% block css %}
 <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
 {% endblock %} {% block content %}
-<h3>Home</h3>
+<h3>{{pawpal.name}}</h3>
+<img src="pawpal.image" class="pawpal_image" alt="{{pawpal.name}}" />
+<div class="message_board">
+  <div class="messages">{% for message in messages %}{% endfor %}</div>
+</div>
 <div class="activity_type_list">
-  {% for activity_type in list_view.all_activity_types %}
+  {% for activity_type in activity_types %}
   <div class="activity_type" id="{{activity_type.id}}">
     {% csrf_token %}
     <form
@@ -14,13 +18,11 @@
         {{activity_type.title}} {{activity_type.pawpal.name}}
       </button>
     </form>
-    {% for activity in list_view. %} {% comment %} #want this to dynamically
-    render!!!! {% endcomment %}
-    <div class="activity_note">
-      <p class="note">{{activity.note}}</p>
-    </div>
-    {% endfor %}
+    <ul class="activity_notes_list">
+      {% for activity in activity_type.activity_set.all %}
+      <li class="activity_note">{{activity.note}}</li>
+      {% endfor %}
+    </ul>
   </div>
-  {% endfor %}
+  {% endfor %} {% endblock %}
 </div>
-{% endblock%}
