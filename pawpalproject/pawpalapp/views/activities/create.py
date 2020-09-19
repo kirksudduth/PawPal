@@ -11,7 +11,7 @@ def create_activity(request, activity_type_id):
         activity_type = ActivityType.objects.get(id=activity_type_id)
         parent = Parent.objects.get(id=request.user.id)
         parent_pawpal = ParentPawPal.objects.filter(parent_id=request.user.id)
-        pawpal = PawPal.objects.get(id=parent_pawpal[0].pawpal_id)
+        pawpal = PawPal.objects.get(id=activity_type.pawpal_id)
         new_activity = Activity.objects.create(
             activity_type_id = activity_type_id,
             note = form_data['note'],
@@ -23,8 +23,8 @@ def create_activity(request, activity_type_id):
 
     else:
         parent_pawpal = ParentPawPal.objects.filter(parent_id=request.user.id)
-        pawpal = PawPal.objects.get(id=parent_pawpal[0].pawpal_id)
         activity_type = ActivityType.objects.get(id=activity_type_id)
+        pawpal = PawPal.objects.get(id=activity_type.pawpal_id)
 
 
 

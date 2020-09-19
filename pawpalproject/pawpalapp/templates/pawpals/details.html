@@ -3,6 +3,9 @@
 {% endblock %} {% block content %}
 <h3>{{pawpal.name}}</h3>
 <img src="pawpal.image" class="pawpal_image" alt="{{pawpal.name}}" />
+<div class="message_board">
+  <div class="messages">{% for message in messages %}{% endfor %}</div>
+</div>
 <div class="activity_type_list">
   {% for activity_type in activity_types %}
   <div class="activity_type" id="{{activity_type.id}}">
@@ -16,15 +19,10 @@
       </button>
     </form>
     <ul class="activity_notes_list">
-      {% for activity in activities %} {% if activity.activity_type_id ==
-      activity_type.id %}
+      {% for activity in activity_type.activity_set.all %}
       <li class="activity_note">{{activity.note}}</li>
-      {% else %}
-      <li class="activity_note">No activity yet!</li>
-      {% endif %} {% endfor %}
+      {% endfor %}
     </ul>
-    {% endfor %}
   </div>
-
-  {% endblock %}
+  {% endfor %} {% endblock %}
 </div>
