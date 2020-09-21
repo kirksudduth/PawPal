@@ -35,3 +35,16 @@ def profile_edit(request):
         }
 
         return render(request, template, context)
+
+    if request.method == "POST":
+        form_data = request.POST
+        print("DATA:", form_data)
+        if ("actual_method" in form_data and form_data['actual_method'] == "PUT"):
+            user = User.objects.get(id=int(form_data['id']))
+            user.email = form_data['email']
+            user.username = form_data['username']
+            user.save()
+
+            return redirect(reverse('pawpalapp:profile'))
+
+            

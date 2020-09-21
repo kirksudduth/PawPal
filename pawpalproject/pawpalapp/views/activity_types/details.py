@@ -24,6 +24,7 @@ def activity_type_details(request, activity_type_id):
 
     if request.method == "POST":
         form_data = request.POST
+        print("DATA:", form_data)
         if (
             "actual_method" in form_data and form_data['actual_method'] == "DELETE"
         ):
@@ -34,6 +35,8 @@ def activity_type_details(request, activity_type_id):
         if (
             "actual_method" in form_data and form_data['actual_method'] == "PUT"
         ):
-            Activity.objects.get(id=int(form_data['id'])).update()  
+            activity = Activity.objects.get(id=int(form_data['id']))
+            activity.note = form_data['note']
+            activity.save()
 
             return redirect(reverse('pawpalapp:activity_type_details', args=[activity_type_id]))

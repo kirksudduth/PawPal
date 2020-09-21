@@ -1,3 +1,24 @@
 {% extends 'shared/base.html' %} {% load static %} {% block css %}
 <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% block content %}
+<h3>Edit Profile</h3>
+<div class="edit_form">
+    <form
+      action="{% url 'pawpalapp:profile_edit' %}"
+      method="POST"
+    >
+{% csrf_token %}
+    <fieldset>
+        <label for="username">Username: </label>
+        <input id="username" type="text" name="username" value="{{user.username}}" />
+    </fieldset>
+    <fieldset>
+        <label for="email">Email: </label>
+        <input id="email" type="email" name="email" value="{{user.email}}" />
+    
+</div>
+<input type="hidden" name="actual_method" value="PUT" />
+<input type="submit" class="btn btn-success" value="Edit" />
+<input type="hidden" name="id" value="{{request.user.id}}" />
+    </form>
 {% endblock %}
