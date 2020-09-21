@@ -14,27 +14,27 @@
   <h6>Most Recent</h6>
   {% for activity in activities %}
   <div class="activity" id="{{activity.id}}">
-    {% csrf_token %}
     <form
       action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
       method="POST"
     >
+    {% csrf_token %}
       <fieldset>
         <label for="note">Note: </label>
         <input id="note" type="text" name="note" value="{{ activity.note }}" />
       </fieldset>
-    </form>
     <p>@ {{activity.when}}</p>
   </div>
   <input type="hidden" name="actual_method" value="PUT" />
-  <button type="button" class="btn btn-success">Edit</button>
+  <input type="submit" class="btn btn-success" value="Edit" />
   <input type="hidden" name="id" value="{{activity.id}}" />
+    </form>
 
-  {% csrf_token %}
   <form
     action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
     method="POST"
   >
+    {% csrf_token %}
     <input type="hidden" name="actual_method" value="DELETE" />
     <button class="btn btn-danger">Delete</button>
     <input type="hidden" name="id" value="{{activity.id}}" />
