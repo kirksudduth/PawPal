@@ -3,6 +3,9 @@
 {% endblock %} {% block content %}
 <h3>{{pawpal.name}}</h3>
 <img src="pawpal.image" class="pawpal_image" alt="{{pawpal.name}}" />
+<a button type="button" href="{% url 'pawpalapp:add_activity_type' pawpal.id %}"
+  >Add Activity Type</a
+>
 <div class="message_board">
   <div class="messages">{% for message in messages %}{% endfor %}</div>
 </div>

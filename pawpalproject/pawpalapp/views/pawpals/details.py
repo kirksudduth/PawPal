@@ -8,7 +8,6 @@ def pawpal_details(request, pawpal_id):
     pawpal = PawPal.objects.get(id=pawpal_id)
     activity_types = ActivityType.objects.filter(pawpal_id=pawpal_id)
     activities = Activity.objects.filter(pawpal_id=pawpal_id)
-    print("Activities:", activities)
     messages = Message.objects.filter(pawpal_id=pawpal_id)
 
     template = 'pawpals/details.html'

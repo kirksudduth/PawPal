@@ -1,0 +1,14 @@
+{% extends 'shared/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% load crispy_forms_tags %} {% block content %}
+<h3>Add Activity Type</h3>
+
+<form method="POST" class="form-group">
+  {% csrf_token %}
+  <fieldset>
+    <label for="title">Title: </label>
+    <input id="title" type="text" name="title" />
+  </fieldset>
+  <button type="submit" class="btn btn-success">Add Activity Type</button>
+</form>
+{% endblock %}
