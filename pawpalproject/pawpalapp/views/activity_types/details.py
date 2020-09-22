@@ -1,25 +1,19 @@
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.shortcuts import render, redirect
-from ...models import ActivityType, Activity, ParentPawPal, PawPal
+from ...models import ActivityType, Activity
 
 @login_required
 def activity_type_details(request, activity_type_id):
     if request.method == 'GET':
         
-        parent_pawpals = list(ParentPawPal.objects.filter(parent_id=request.user.id))
         
         activity_type = ActivityType.objects.get(id=activity_type_id)
-        # activity_type.activity_set.all.reverse|
-        activities = Activity.objects.filter(activity_type_id=activity_type.id)[:5:-1]
-        # activities.reverse()
-        pawpal = PawPal.objects.get(id=activity_type.pawpal_id)
 
         template = 'activity_types/detail.html'
+        
         context = {
             'activity_type': activity_type,
-            'activities' : activities,
-            'pawpal' : pawpal
         }
 
         return render(request, template, context)

@@ -133,3 +133,7 @@ BOOTSTRAP4_SITE_NAME = 'PawPal'
 BOOTSTRAP4_TITLE = 'PawPal'
 
 USE_TZ = True
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
