@@ -10,7 +10,9 @@ def activity_type_details(request, activity_type_id):
         parent_pawpals = list(ParentPawPal.objects.filter(parent_id=request.user.id))
         
         activity_type = ActivityType.objects.get(id=activity_type_id)
-        activities = list(Activity.objects.filter(activity_type_id=activity_type.id))
+        # activity_type.activity_set.all.reverse|
+        activities = Activity.objects.filter(activity_type_id=activity_type.id)[:5:-1]
+        # activities.reverse()
         pawpal = PawPal.objects.get(id=activity_type.pawpal_id)
 
         template = 'activity_types/detail.html'
@@ -24,7 +26,6 @@ def activity_type_details(request, activity_type_id):
 
     if request.method == "POST":
         form_data = request.POST
-        print("DATA:", form_data)
         if (
             "actual_method" in form_data and form_data['actual_method'] == "DELETE"
         ):

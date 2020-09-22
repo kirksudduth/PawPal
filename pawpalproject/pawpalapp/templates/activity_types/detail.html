@@ -12,7 +12,7 @@
 >
 <div class="recent_activity_list">
   <h6>Most Recent</h6>
-  {% for activity in activities %}
+  {% for activity in activity_type.activity_set.all.reverse|slice:":5" %}
   <div class="activity" id="{{activity.id}}">
     <form
       action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
