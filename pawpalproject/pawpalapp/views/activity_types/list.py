@@ -20,6 +20,9 @@ def activity_type_list(request):
                     list_view[f'{activity_type.title}'].append(activity)
                 else:
                     None
+        print("LIST VIEW", list_view)
+
+
 
 
        
@@ -31,6 +34,7 @@ def activity_type_list(request):
         }
 
         return render(request, template_name, context)
+
 
     # elif request.method == 'POST':
     #     form_data = request.POST

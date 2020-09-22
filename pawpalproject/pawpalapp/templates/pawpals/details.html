@@ -3,7 +3,11 @@
 {% endblock %} {% block content %}
 <h3>{{pawpal.name}}</h3>
 <img src="pawpal.image" class="pawpal_image" alt="{{pawpal.name}}" />
-<a button type="button" href="{% url 'pawpalapp:add_activity_type' pawpal.id %}"
+<a
+  button
+  type="button"
+  class="btn btn-success"
+  href="{% url 'pawpalapp:add_activity_type' pawpal.id %}"
   >Add Activity Type</a
 >
 <div class="message_board">
@@ -22,7 +26,7 @@
       </button>
     </form>
     <ul class="activity_notes_list">
-      {% for activity in activity_type.activity_set.all %}
+      {% for activity in activity_type.activity_set.all.reverse|slice:":5" %}
       <li class="activity_note">{{activity.note}}</li>
       {% endfor %}
     </ul>

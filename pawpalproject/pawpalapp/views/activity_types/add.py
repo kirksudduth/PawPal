@@ -10,7 +10,7 @@ def add_activity_type(request, pawpal_id):
         template = "activity_types/add.html"
 
         return render(request, template, {})
-# ADDS ACTIVITY TYPE TO THE LIST FOR    ADDING ACTIVITIES
+# ADDS ACTIVITY TYPE TO THE LIST FOR ADDING ACTIVITIES
     if request.method == "POST":
         form_data = request.POST
         pawpal = PawPal.objects.get(id=pawpal_id)

@@ -9,5 +9,8 @@ class Activity(models.Model):
     note = models.CharField(max_length=140)
     when = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['when']
+
     def __str__(self):
         return f'{self.pawpal.name} did {self.activity_type.title} on {self.when}.'

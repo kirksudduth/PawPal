@@ -6,9 +6,11 @@ from ...models import PawPal, ActivityType, Activity, Message
 @login_required
 def pawpal_details(request, pawpal_id):
     pawpal = PawPal.objects.get(id=pawpal_id)
-    activity_types = ActivityType.objects.filter(pawpal_id=pawpal_id)
+    activity_types = list(ActivityType.objects.filter(pawpal_id=pawpal_id))
     activities = Activity.objects.filter(pawpal_id=pawpal_id)
     messages = Message.objects.filter(pawpal_id=pawpal_id)
+    
+
 
     template = 'pawpals/details.html'
 
@@ -16,7 +18,7 @@ def pawpal_details(request, pawpal_id):
         'pawpal' : pawpal,
         'activity_types' : activity_types,
         'activities' : activities,
-        'messages' : messages
+        'messages' : messages,
     }
 
     return render(request, template, context)

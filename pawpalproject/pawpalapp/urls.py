@@ -11,6 +11,7 @@ urlpatterns = [
     path('logout/', logout_user, name='logout'),
     path('pawpals/add', create_pawpal, name='add_pawpal'),
     path('', pawpal_list, name='home'),
+    # path('', activity_type_list, name='home'),
     path('pawpals/find', find_pawpal, name='find_pawpal'),
     path('pawpals/<int:pawpal_id>', pawpal_details, name='pawpal_details'),
     path('pawpals/<int:pawpal_id>/add_activity_type', add_activity_type, name='add_activity_type'),
