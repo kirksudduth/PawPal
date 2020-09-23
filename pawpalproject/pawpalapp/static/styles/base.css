@@ -1,6 +1,6 @@
-body {
+/* body {
   background-color: #24d2f9;
-}
+} */
 
 h1 {
   font-family: "Cutive Mono", serif;
@@ -22,7 +22,12 @@ p.no_acct {
   font-family: "Cutive Mono", serif;
   font-size: 20px;
 }
+
 button,
 small {
   font-family: "Quicksand", sans-serif;
+}
+
+.hamburger {
+  color: black;
 }
