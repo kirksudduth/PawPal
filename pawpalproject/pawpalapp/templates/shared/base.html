@@ -19,28 +19,31 @@
       integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
       crossorigin="anonymous"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% block css %} {% endblock %}
   </head>
   <body>
     <header>
       {% block nav %}
-      <nav class="navbar navbar-expand-md sticky-top">
-        <a class="navbar-brand" href="{% url 'pawpalapp:home' %}">PawPal</a>
+      <nav class="navbar navbar-expand-sm sticky-top">
+        <a class="navbar-brand mb-0 h1" href="{% url 'pawpalapp:home' %}"
+          >PawPal</a
+        >
         {% if request.user.is_authenticated %}
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-target="#navbarText"
+          aria-controls="navbarText"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"
-            ><i class="fas fa-bars hamburger"></i
+            ><i class="fas fa-paw hamburger"></i
           ></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto nav">
             <li class="nav-item">
               <a class="nav-link" href="{% url 'pawpalapp:home' %}">Home</a>
@@ -55,13 +58,6 @@
                 >Add PawPal</a
               >
             </li>
-            {% comment %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'pawpalapp:find_pawpal' %}"
-                >Find PawPal</a
-              >
-            </li>
-            {% endcomment %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'pawpalapp:logout' %}">Logout</a>
             </li>
@@ -71,6 +67,29 @@
       </nav>
       {% endblock %}
     </header>
+
     {% block content %} {% endblock %}
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper.JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/4940090f00.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
