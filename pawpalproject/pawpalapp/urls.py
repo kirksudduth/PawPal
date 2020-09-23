@@ -14,6 +14,7 @@ urlpatterns = [
     # path('', activity_type_list, name='home'),
     path('pawpals/find', find_pawpal, name='find_pawpal'),
     path('pawpals/<int:pawpal_id>', pawpal_details, name='pawpal_details'),
+    path('pawpals/<int:pawpal_id>/message', add_message, name='add_message'),
     path('pawpals/<int:pawpal_id>/add_activity_type', add_activity_type, name='add_activity_type'),
     path('profile/', profile, name='profile'),
     path('profile/edit', profile_edit, name='profile_edit'),

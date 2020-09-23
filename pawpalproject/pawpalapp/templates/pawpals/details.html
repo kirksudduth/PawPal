@@ -3,6 +3,23 @@
 {% endblock %} {% block content %}
 <h3>{{pawpal.name}}</h3>
 <img src="pawpal.image" class="pawpal_image" alt="{{pawpal.name}}" />
+<div class="message_board">
+  <h4>Message Board for {{pawpal.name}}</h4>
+  <div class="messages">
+    <ul>
+      {% for message in messages reversed %}
+      <li>{{message.parent.user.username}}: {{message.body}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <a
+    button
+    type="button"
+    class="btn"
+    href="{% url 'pawpalapp:add_message' pawpal.id %}"
+    >Add Message</a
+  >
+</div>
 <a
   button
   type="button"
@@ -10,9 +27,6 @@
   href="{% url 'pawpalapp:add_activity_type' pawpal.id %}"
   >Add Activity Type</a
 >
-<div class="message_board">
-  <div class="messages">{% for message in messages %}{% endfor %}</div>
-</div>
 <div class="activity_type_list">
   {% for activity_type in activity_types %}
   <div class="activity_type" id="{{activity_type.id}}">

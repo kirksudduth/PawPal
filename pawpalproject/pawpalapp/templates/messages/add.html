@@ -1,0 +1,13 @@
+{% extends 'shared/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% block content %}
+<h3>Add Message</h3>
+<form method="POST" class="form-group">
+  {% csrf_token %}
+  <fieldset>
+    <label for="message">Message: </label>
+    <input type="text" id="message" name="message" />
+  </fieldset>
+  <button type="submit" class="btn btn-success">Add Message to Board</button>
+</form>
+{% endblock %}
