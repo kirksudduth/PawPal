@@ -11,3 +11,4 @@ from .activity_types.details import activity_type_details
 from .activity_types.add import add_activity_type
 from .activities.create import create_activity
 from .messages.add import add_message
+from .messages.list import message_list

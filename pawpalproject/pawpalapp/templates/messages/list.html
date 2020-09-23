@@ -1,0 +1,14 @@
+{% extends 'shared/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% block content %}
+<h3>Message Board</h3>
+<div class="message_board">
+  <ul class="message_list">
+    {% for message in messages reversed %}
+    <li class="message">
+      {{message.parent.user.username}} thinks: {{message.body}}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
