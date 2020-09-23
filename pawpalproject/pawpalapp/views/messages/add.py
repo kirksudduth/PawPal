@@ -9,7 +9,6 @@ def add_message(request, pawpal_id):
 
         template = "messages/add.html"
 
-
         return render(request, template, {'pawpal' : pawpal_id})
 
     if request.method == "POST":

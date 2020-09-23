@@ -42,5 +42,6 @@
 
   {% endfor %}
 </div>
+<a button type="button" class="btn btn-outline-success" href="{% url 'pawpalapp:pawpal_details' pawpal.id %}">{{pawpal.name}}</a>
 
 {% endblock %}

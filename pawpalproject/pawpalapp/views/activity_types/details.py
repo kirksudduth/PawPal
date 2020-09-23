@@ -9,11 +9,13 @@ def activity_type_details(request, activity_type_id):
         
         
         activity_type = ActivityType.objects.get(id=activity_type_id)
+        pawpal = activity_type.pawpal
 
         template = 'activity_types/detail.html'
         
         context = {
             'activity_type': activity_type,
+            'pawpal' : pawpal
         }
 
         return render(request, template, context)

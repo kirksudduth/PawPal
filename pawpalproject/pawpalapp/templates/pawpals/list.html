@@ -39,7 +39,7 @@
         href="{% url 'pawpalapp:pawpal_details' pawpal.pawpal.id %}">Do Stuff with {{pawpal.pawpal.name}}</a>
         {% endfor %}
     {% else %}
-    <h3>Add Pawpal or Search for PawPal</h3>
+    <h3>Add Pawpal</h3>
     <div>
     <a
     button
@@ -48,12 +48,12 @@
     href="{% url 'pawpalapp:add_pawpal' %}"
     >Add PawPal</a
   >
-    <a
+    {% comment %} <a
     button
     type="button"
     class="btn btn-success"
     href="{% url 'pawpalapp:find_pawpal' %}"
-    >Find Pawpal</a>
+    >Find Pawpal</a> {% endcomment %}
     {% endif %}
 
   </body>
