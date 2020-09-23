@@ -3,7 +3,7 @@
     "model": "pawpalapp.message",
     "pk": 1,
     "fields": {
-      "body": "DAMMIT ANNE!! . . . I love you",
+      "body": "DAMMIT Allie!! . . . I love you",
       "when": "2020-09-12",
       "parent": 1,
       "pawpal": 1
@@ -183,7 +183,7 @@
     "model": "pawpalapp.message",
     "pk": 19,
     "fields": {
-      "body": "Anne was acting a bit funny",
+      "body": "Allie was acting a bit funny",
       "when": "2020-09-12",
       "parent": 7,
       "pawpal": 1
