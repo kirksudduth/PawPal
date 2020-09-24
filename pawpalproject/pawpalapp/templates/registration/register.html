@@ -1,7 +1,10 @@
 {% extends 'shared/base.html' %} {% block title %}Create Account{% endblock %}
 {% load crispy_forms_tags %} {% block content %}
-<form method="POST" class="form-group">
-  {{ form|crispy }}
+<form method="POST" class="uni_form">
+  {% csrf_token %} {{ form|crispy }}
   <button type="submit" class="btn btn-success">Register</button>
 </form>
+<p class="no_acct">
+  Already registered? <a href="{% url 'pawpalapp:home' %}">Sign in</a>
+</p>
 {% endblock %}

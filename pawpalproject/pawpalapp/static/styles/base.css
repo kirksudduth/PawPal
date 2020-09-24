@@ -1,11 +1,16 @@
-/* body {
+body {
   background-color: #24d2f9;
-} */
+}
 
 h1 {
   font-family: "Cutive Mono", serif;
   font-size: 50px;
   /* text-align: center; */
+}
+
+.nav,
+.pawpal {
+  background-color: #24d2f9;
 }
 
 h3 {
