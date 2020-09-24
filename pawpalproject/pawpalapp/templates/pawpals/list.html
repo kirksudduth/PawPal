@@ -29,21 +29,22 @@
     <nav class="navbar navbar-expand-md sticky-top">
         <a class="navbar-brand" href="{% url 'pawpalapp:home' %}">PawPal</a>
     </header>
+    <div class="container-fluid">
     {% if parent_pawpal_list %}
     {% for pawpal in parent_pawpal_list%}
-        <div class="pawpal" id="{{pawpal.pawpal.id}}">
+        <div class="pawpal container-fluid" id="{{pawpal.pawpal.id}}">
         <img src="{{pawpal.pawpal.image}}" alt="{{pawpal.pawpal.name}}"/>
         <p>{{pawpal.pawpal.namej}}</p>
         </div>
         <a
         button
         type="button"
-        class="btn btn-success"
+        class="btn btn-success container-fluid"
         href="{% url 'pawpalapp:pawpal_details' pawpal.pawpal.id %}">Do Stuff with {{pawpal.pawpal.name}}</a>
         {% endfor %}
     {% else %}
     <h3>Add Pawpal</h3>
-    <div>
+    <div class="container-fluid">
     <a
     button
     type="button"
@@ -52,6 +53,7 @@
     >Add PawPal</a
   >
     {% endif %}
+    </div>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
