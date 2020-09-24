@@ -1,4 +1,6 @@
-{% extends 'shared/base.html' %} {% block content %}
+{% extends 'shared/base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+{% endblock %} {% block content %}
 <h3>L O G I N</h3>
 <form method="post" action="{% url 'pawpalapp:login' %}">
   {% csrf_token %} {{ form.as_p }}
