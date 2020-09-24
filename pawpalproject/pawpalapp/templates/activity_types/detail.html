@@ -10,7 +10,9 @@
   href="{% url 'pawpalapp:add_activity' activity_type.id %}"
   >{{activity_type.title}}</a
 >
+<a button type="button" class="btn btn-outline-success" href="{% url 'pawpalapp:pawpal_details' pawpal.id %}">Back 2 {{pawpal.name}}</a>
 <div class="recent_activity_list">
+
   <h6>Most Recent</h6>
   {% for activity in activity_type.activity_set.all.reverse|slice:":5" %}
   <div class="activity" id="{{activity.id}}">
@@ -42,6 +44,5 @@
 
   {% endfor %}
 </div>
-<a button type="button" class="btn btn-outline-success" href="{% url 'pawpalapp:pawpal_details' pawpal.id %}">{{pawpal.name}}</a>
 
 {% endblock %}
