@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.templatetags.static',
     'pawpalapp',
     'bootstrap4',
-    'bootstrap4_nav',
     'crispy_forms',
 ]
 
