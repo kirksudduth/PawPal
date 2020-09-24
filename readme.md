@@ -77,4 +77,4 @@ I made practical use of all the skills I have learned at NSS up to this point, i
 
 ## Database Diagram
 
-![PawPal ERD](pawpalapp/images/PawPal.png)
+![PawPal ERD](pawpalproject/pawpalapp/images/PawPal.png)

@@ -2,6 +2,12 @@ body {
   background-color: #24d2f9;
 }
 
+.messages {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
 h1 {
   font-family: "Cutive Mono", serif;
   font-size: 50px;
@@ -13,7 +19,8 @@ h1 {
   background-color: #24d2f9;
 }
 
-h3 {
+h3,
+h4 {
   font-family: "Cutive Mono", serif;
   font-size: 25px;
   text-align: center;
@@ -33,6 +40,7 @@ small {
   font-family: "Quicksand", sans-serif;
 }
 
-.hamburger {
-  color: black;
+.btn,
+.button {
+  margin-top: 5px;
 }
