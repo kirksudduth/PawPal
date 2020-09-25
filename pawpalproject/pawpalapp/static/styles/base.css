@@ -11,7 +11,6 @@ body {
 h1 {
   font-family: "Cutive Mono", serif;
   font-size: 50px;
-  /* text-align: center; */
 }
 
 .nav,
@@ -19,16 +18,22 @@ h1 {
   background-color: #24d2f9;
 }
 
-h3,
-h4 {
+h3 {
   font-family: "Cutive Mono", serif;
   font-size: 25px;
   text-align: center;
-  text-shadow: 1px 1px #157b92;
 }
 
-label {
+h3 {
   font-family: "Cutive Mono", serif;
+  text-align: center;
+}
+
+label,
+p,
+h4 {
+  font-family: "Cutive Mono", serif;
+  text-align: center;
 }
 p.no_acct {
   font-family: "Cutive Mono", serif;
@@ -41,6 +46,7 @@ small {
 }
 
 .btn,
-.button {
+.button,
+fieldset {
   margin-top: 5px;
 }

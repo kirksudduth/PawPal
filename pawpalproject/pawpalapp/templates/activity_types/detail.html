@@ -1,4 +1,4 @@
-{% extends 'shared/base.html' %} {% load static %} {% block css %}
+{% extends 'shared/base.html' %} {% load static %}{% block css %}
 <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
 {% endblock %} {% block content %}
 
@@ -20,7 +20,7 @@
   >
 </div>
 <div class="recent_activity_list container-fluid">
-  <h6>Most Recent</h6>
+  <h4>Most Recent</h4>
   {% for activity in activity_type.activity_set.all.reverse|slice:":5" %}
   <div class="activity container-fluid" id="{{activity.id}}">
     <form
@@ -29,11 +29,17 @@
       class="container-fluid"
     >
       {% csrf_token %}
-      <fieldset class="container-fluid">
+      <fieldset>
         <label for="note">Note: </label>
-        <input id="note" type="text" name="note" value="{{ activity.note }}" />
+        <input
+          id="note"
+          type="text"
+          name="note"
+          value="{{ activity.note }}"
+          textarea="200"
+        />
       </fieldset>
-      <p class="container-fluid">@ {{activity.when}}</p>
+      <p>@ {{activity.when}}</p>
       <input type="hidden" name="actual_method" value="PUT" />
       <input
         type="submit"
