@@ -1,46 +1,65 @@
-{% extends 'shared/base.html' %} {% load static %} {% block css %}
+{% extends 'shared/base.html' %} {% load static %}{% block css %}
 <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
 {% endblock %} {% block content %}
 
 <h3>{{activity_type.title}}!</h3>
-<a
-  type="button"
-  button
-  class="btn btn-success"
-  href="{% url 'pawpalapp:add_activity' activity_type.id %}"
-  >{{activity_type.title}}</a
->
-<a button type="button" class="btn btn-outline-success" href="{% url 'pawpalapp:pawpal_details' pawpal.id %}">Back 2 {{pawpal.name}}</a>
-<div class="recent_activity_list">
-
-  <h6>Most Recent</h6>
+<div class="container-fluid">
+  <a
+    button
+    type="button"
+    class="btn btn-success"
+    href="{% url 'pawpalapp:add_activity' activity_type.id %}"
+    >{{activity_type.title}}</a
+  >
+  <a
+    button
+    type="button"
+    class="btn btn-outline-success"
+    href="{% url 'pawpalapp:pawpal_details' pawpal.id %}"
+    >Back 2 {{pawpal.name}}</a
+  >
+</div>
+<div class="recent_activity_list container-fluid">
+  <h4>Most Recent</h4>
   {% for activity in activity_type.activity_set.all.reverse|slice:":5" %}
-  <div class="activity" id="{{activity.id}}">
+  <div class="activity container-fluid" id="{{activity.id}}">
     <form
       action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
       method="POST"
+      class="container-fluid"
     >
-    {% csrf_token %}
+      {% csrf_token %}
       <fieldset>
         <label for="note">Note: </label>
-        <input id="note" type="text" name="note" value="{{ activity.note }}" />
+        <input
+          id="note"
+          type="text"
+          name="note"
+          value="{{ activity.note }}"
+          textarea="200"
+        />
       </fieldset>
-    <p>@ {{activity.when}}</p>
-  </div>
-  <input type="hidden" name="actual_method" value="PUT" />
-  <input type="submit" class="btn btn-success" value="Edit" />
-  <input type="hidden" name="id" value="{{activity.id}}" />
+      <p>@ {{activity.when}}</p>
+      <input type="hidden" name="actual_method" value="PUT" />
+      <input
+        type="submit"
+        class="btn btn-success container-fluid"
+        value="Edit"
+      />
+      <input type="hidden" name="id" value="{{activity.id}}" />
     </form>
 
-  <form
-    action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
-    method="POST"
-  >
-    {% csrf_token %}
-    <input type="hidden" name="actual_method" value="DELETE" />
-    <button class="btn btn-danger">Delete</button>
-    <input type="hidden" name="id" value="{{activity.id}}" />
-  </form>
+    <form
+      action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
+      method="POST"
+      class="container-fluid"
+    >
+      {% csrf_token %}
+      <input type="hidden" name="actual_method" value="DELETE" />
+      <button class="btn btn-danger container-fluid">Delete</button>
+      <input type="hidden" name="id" value="{{activity.id}}" />
+    </form>
+  </div>
 
   {% endfor %}
 </div>

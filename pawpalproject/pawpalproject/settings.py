@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Chicago'
 
 USE_I18N = True
 
@@ -130,8 +130,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 BOOTSTRAP4_SITE_NAME = 'PawPal'
 
 BOOTSTRAP4_TITLE = 'PawPal'
-
-USE_TZ = True
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
