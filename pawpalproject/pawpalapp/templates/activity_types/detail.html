@@ -3,44 +3,57 @@
 {% endblock %} {% block content %}
 
 <h3>{{activity_type.title}}!</h3>
-<a
-  type="button"
-  button
-  class="btn btn-success"
-  href="{% url 'pawpalapp:add_activity' activity_type.id %}"
-  >{{activity_type.title}}</a
->
-<a button type="button" class="btn btn-outline-success" href="{% url 'pawpalapp:pawpal_details' pawpal.id %}">Back 2 {{pawpal.name}}</a>
-<div class="recent_activity_list">
-
+<div class="container-fluid">
+  <a
+    button
+    type="button"
+    class="btn btn-success"
+    href="{% url 'pawpalapp:add_activity' activity_type.id %}"
+    >{{activity_type.title}}</a
+  >
+  <a
+    button
+    type="button"
+    class="btn btn-outline-success"
+    href="{% url 'pawpalapp:pawpal_details' pawpal.id %}"
+    >Back 2 {{pawpal.name}}</a
+  >
+</div>
+<div class="recent_activity_list container-fluid">
   <h6>Most Recent</h6>
   {% for activity in activity_type.activity_set.all.reverse|slice:":5" %}
-  <div class="activity" id="{{activity.id}}">
+  <div class="activity container-fluid" id="{{activity.id}}">
     <form
       action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
       method="POST"
+      class="container-fluid"
     >
-    {% csrf_token %}
-      <fieldset>
+      {% csrf_token %}
+      <fieldset class="container-fluid">
         <label for="note">Note: </label>
         <input id="note" type="text" name="note" value="{{ activity.note }}" />
       </fieldset>
-    <p>@ {{activity.when}}</p>
-  </div>
-  <input type="hidden" name="actual_method" value="PUT" />
-  <input type="submit" class="btn btn-success" value="Edit" />
-  <input type="hidden" name="id" value="{{activity.id}}" />
+      <p class="container-fluid">@ {{activity.when}}</p>
+      <input type="hidden" name="actual_method" value="PUT" />
+      <input
+        type="submit"
+        class="btn btn-success container-fluid"
+        value="Edit"
+      />
+      <input type="hidden" name="id" value="{{activity.id}}" />
     </form>
 
-  <form
-    action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
-    method="POST"
-  >
-    {% csrf_token %}
-    <input type="hidden" name="actual_method" value="DELETE" />
-    <button class="btn btn-danger">Delete</button>
-    <input type="hidden" name="id" value="{{activity.id}}" />
-  </form>
+    <form
+      action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
+      method="POST"
+      class="container-fluid"
+    >
+      {% csrf_token %}
+      <input type="hidden" name="actual_method" value="DELETE" />
+      <button class="btn btn-danger container-fluid">Delete</button>
+      <input type="hidden" name="id" value="{{activity.id}}" />
+    </form>
+  </div>
 
   {% endfor %}
 </div>
