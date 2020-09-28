@@ -19,6 +19,7 @@ urlpatterns = [
     path('pawpals/<int:pawpal_id>/add_activity_type', add_activity_type, name='add_activity_type'),
     path('profile/', profile, name='profile'),
     path('profile/edit', profile_edit, name='profile_edit'),
+    path('profile/dedpal', delete_pawpal, name='delete_pawpal'),
     path('activity_types/<int:activity_type_id>', activity_type_details, name='activity_type_details'),
     path('activity_types/<int:activity_type_id>/add_activity', create_activity, name='add_activity'),
 ]

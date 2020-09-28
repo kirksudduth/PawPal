@@ -1,0 +1,9 @@
+{% extends 'shared/base.html' %} {% block content %}
+<h3>Focus on all the great time you shared with {{pawpal.name}}</h3>
+<form method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="actual_method" value="DELETE" />
+  <input type="submit" class="btn btn-success" value="Memories Last Forever" />
+  <input type="hidden" name="id" value="{{pawpal.id}}" />
+</form>
+{% endblock %}
