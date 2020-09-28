@@ -45,21 +45,3 @@ def profile_edit(request):
 
             return redirect(reverse('pawpalapp:profile'))
 
-# **** ADDED DELETE PAWPAL FUNCTIONALITY IN THE EDIT FUNCTION ****
-
-            
-# @login_required
-# def delete_pawpal(request, pawpal_id):
-#     if request.method == "GET":
-#         pawpal = PawPal.objects.get(id=pawpal_id)
-#         template = 'pawpals/dedpal.html'
-#         context = { 'pawpal' : pawpal }
-
-#         return render(request, template, context)
-
-#     if request.method == "POST":
-#         form_data = request.POST
-#         if ("actual_method" in form_data and form_data['actual_method'] == "DELETE"):
-#             PawPal.objects.delete(id=int(form_data['id']))
-
-#             return redirect(reverse('pawpalapp:profile'))

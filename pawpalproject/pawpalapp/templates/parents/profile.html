@@ -19,14 +19,18 @@
   <h4>Your PawPals!</h4>
   {% for pawpal in profile_view.parent_pawpals%}
   <div class="pawpal container-fluid">
-    <a href="{% url 'pawpalapp:pawpal_details' pawpal.pawpal.id %}"
+    <a
+      class="pawpal_name"
+      href="{% url 'pawpalapp:pawpal_details' pawpal.pawpal.id %}"
       >{{ pawpal.pawpal.name }}</a
     >
     <form action="{% url 'pawpalapp:delete_pawpal' %}" method="GET">
       {% csrf_token %}
       <input type="hidden" value="{{ pawpal.pawpal.id }}" name="id" />
       <input type="hidden" value="DELETE" name="actual_method" />
-      <button class="btn btn-danger container-fluid">PalPassed</button>
+      <button class="btn btn-danger container-fluid">
+        PalPassed :angelemoji
+      </button>
     </form>
   </div>
   {% endfor %}

@@ -18,6 +18,10 @@ h1 {
   background-color: #24d2f9;
 }
 
+a.pawpal_name {
+  align-self: center;
+}
+
 h3 {
   font-family: "Cutive Mono", serif;
   font-size: 25px;
