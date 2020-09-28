@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
 {% endblock %} {% block content %}
 <h3>{{pawpal.name}}</h3>
-<img src="pawpal.image" class="pawpal_image" alt="{{pawpal.name}}" />
 <div class="message_board container-fluid">
   <h4 class="messages">Messages</h4>
   <div class="messages container-fluid">
@@ -12,18 +11,18 @@
       {% endfor %}
     </ul>
   </div>
-  <div class="container-fluid">
+  <div class="row">
     <a
       button
       type="button"
-      class="btn btn-primary"
+      class="btn btn-primary col"
       href="{% url 'pawpalapp:add_message' pawpal.id %}"
       >Add Message</a
     >
     <a
       button
       type="button"
-      class="btn btn-primary"
+      class="btn btn-primary col"
       href="{% url 'pawpalapp:message_list' pawpal.id %}"
       >Go to Message Board</a
     >

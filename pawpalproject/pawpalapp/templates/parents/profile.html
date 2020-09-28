@@ -10,7 +10,7 @@
   <a
     button
     type="button"
-    class="btn btn-success"
+    class="btn btn-success container-fluid"
     href="{% url 'pawpalapp:profile_edit' %}"
     >Edit Profile</a
   >
@@ -18,14 +18,22 @@
 <div class="pawpals">
   <h4>Your PawPals!</h4>
   {% for pawpal in profile_view.parent_pawpals%}
-  <div class="pawpal">
-    <h5>{{ pawpal.pawpal.name }}</h5>
+  <div class="pawpal container-fluid">
+    <a href="{% url 'pawpalapp:pawpal_details' pawpal.pawpal.id %}"
+      >{{ pawpal.pawpal.name }}</a
+    >
+    <form action="{% url 'pawpalapp:delete_pawpal' %}" method="GET">
+      {% csrf_token %}
+      <input type="hidden" value="{{ pawpal.pawpal.id }}" name="id" />
+      <input type="hidden" value="DELETE" name="actual_method" />
+      <button class="btn btn-danger container-fluid">PalPassed</button>
+    </form>
   </div>
   {% endfor %}
   <a
     button
     type="button"
-    class="btn btn-success"
+    class="btn btn-success container-fluid"
     href="{% url 'pawpalapp:add_pawpal' %}"
     >Add PawPal</a
   >

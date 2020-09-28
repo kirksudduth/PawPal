@@ -7,6 +7,7 @@ from .pawpals.find import find_pawpal
 from .pawpals.details import pawpal_details
 from .parents.profile import profile
 from .parents.profile import profile_edit
+from .pawpals.delete import delete_pawpal
 from .activity_types.details import activity_type_details
 from .activity_types.add import add_activity_type
 from .activities.create import create_activity

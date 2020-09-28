@@ -1,9 +1,11 @@
 {% extends 'shared/base.html' %} {% load static %} {% block css %}
 <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
-{% endblock %} {% block title %}Add Pawpal{% endblock %} {%load
+{% endblock %} {% block title %}Add Pawpal{% endblock %} {% load
 crispy_forms_tags %} {% block content %}
-<form method="POST" class="form-group">
-  {{ form }}
-  <button type="submit" class="btn btn-success">Add Pawpal</button>
+<form method="POST" class="form-group container-fluid">
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-success container-fluid">
+    Add Pawpal
+  </button>
 </form>
 {% endblock %}

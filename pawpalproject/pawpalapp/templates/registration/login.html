@@ -4,7 +4,7 @@
 <h3>L O G I N</h3>
 <form method="post" action="{% url 'pawpalapp:login' %}">
   {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Login</button>
+  <button type="submit" class="btn btn-success container-fluid">Login</button>
 </form>
 <p class="no_acct">
   No account? <a href="{% url 'pawpalapp:register'%}">REGISTER!</a>

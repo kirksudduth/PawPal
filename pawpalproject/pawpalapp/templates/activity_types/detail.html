@@ -3,18 +3,18 @@
 {% endblock %} {% block content %}
 
 <h3>{{activity_type.title}}!</h3>
-<div class="container-fluid">
+<div class="row">
   <a
     button
     type="button"
-    class="btn btn-success"
+    class="btn btn-success col"
     href="{% url 'pawpalapp:add_activity' activity_type.id %}"
     >{{activity_type.title}}</a
   >
   <a
     button
     type="button"
-    class="btn btn-outline-success"
+    class="btn btn-outline-success col"
     href="{% url 'pawpalapp:pawpal_details' pawpal.id %}"
     >Back 2 {{pawpal.name}}</a
   >

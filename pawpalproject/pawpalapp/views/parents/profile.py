@@ -9,7 +9,6 @@ def profile(request):
     if request.method == 'GET':
         parent = Parent.objects.get(user_id=request.user.id)
         parent_pawpal_set = list(ParentPawPal.objects.filter(parent_id=request.user.id))
-        print("PAWPALS:", parent_pawpal_set)
         profile_view = {}
         profile_view['parent'] = parent
         profile_view['parent_pawpals'] = parent_pawpal_set
@@ -38,7 +37,6 @@ def profile_edit(request):
 
     if request.method == "POST":
         form_data = request.POST
-        print("DATA:", form_data)
         if ("actual_method" in form_data and form_data['actual_method'] == "PUT"):
             user = User.objects.get(id=int(form_data['id']))
             user.email = form_data['email']
@@ -47,4 +45,21 @@ def profile_edit(request):
 
             return redirect(reverse('pawpalapp:profile'))
 
+# **** ADDED DELETE PAWPAL FUNCTIONALITY IN THE EDIT FUNCTION ****
+
             
+# @login_required
+# def delete_pawpal(request, pawpal_id):
+#     if request.method == "GET":
+#         pawpal = PawPal.objects.get(id=pawpal_id)
+#         template = 'pawpals/dedpal.html'
+#         context = { 'pawpal' : pawpal }
+
+#         return render(request, template, context)
+
+#     if request.method == "POST":
+#         form_data = request.POST
+#         if ("actual_method" in form_data and form_data['actual_method'] == "DELETE"):
+#             PawPal.objects.delete(id=int(form_data['id']))
+
+#             return redirect(reverse('pawpalapp:profile'))
