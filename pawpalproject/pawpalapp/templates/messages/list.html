@@ -1,21 +1,21 @@
-{% extends 'shared/base.html' %} {% load static %} {% block css %}
-<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
-{% endblock %} {% block content %}
-<h3>Message Board</h3>
-<div class="message_board container-fluid">
-  <ul class="message_list">
-    {% for message in messages reversed %}
-    <li class="message">
-      {{message.parent.user.username}} thinks: {{message.body}}
-    </li>
-    {% endfor %}
-  </ul>
-  <a
-    button
-    type="button"
-    class="btn btn-outline-success"
-    href="{% url 'pawpalapp:pawpal_details' pawpal.id %}"
-    >Back 2 {{pawpal.name}}</a
-  >
+{% extends 'shared/base.html' %} {% block content %}
+<div class="board">
+  <h3>Message Board</h3>
+  <div class="message_board container-fluid">
+    <ul class="message_list">
+      {% for message in messages reversed %}
+      <li class="message">
+        {{message.parent.user.username}} thinks: {{message.body}}
+      </li>
+      {% endfor %}
+    </ul>
+    <a
+      button
+      type="button"
+      class="btn btn-outline-success"
+      href="{% url 'pawpalapp:pawpal_details' pawpal.id %}"
+      >Back 2 {{pawpal.name}}</a
+    >
+  </div>
 </div>
 {% endblock %}
