@@ -1,6 +1,4 @@
-{% extends 'shared/base.html' %} {% load static %} {% block css %}
-<link rel="stylesheet" href="{% static 'styles/base.css' %}" />
-{% endblock %} {% block content %}
+{% extends 'shared/base.html' %} {% block content %}
 <h3>Edit Profile</h3>
 <div class="edit_form">
     <form
@@ -17,6 +15,8 @@
         <input id="email" type="email" name="email" value="{{user.email}}" />
     
 </div>
-</form>
-
+<input type="hidden" name="actual_method" value="PUT" />
+<input type="submit" class="btn btn-success" value="Edit" />
+<input type="hidden" name="id" value="{{request.user.id}}" />
+    </form>
 {% endblock %}
