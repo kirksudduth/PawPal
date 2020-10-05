@@ -36,7 +36,7 @@
   >
   <div class="activity_type_list container-fluid">
     {% for activity_type in activity_types %}
-    <div class="activity_type container-fluid" id="{{activity_type.id}}">
+    <div class="activity_type card container-fluid" id="{{activity_type.id}}">
       {% csrf_token %}
       <form
         action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
@@ -46,10 +46,10 @@
           {{activity_type.title}} {{activity_type.pawpal.name}}
         </button>
       </form>
-      <div class="activity_notes_list container-fluid">
+      <div class="activity_notes_list card-body container-fluid">
         {% for activity in activity_type.activity_set.all.reverse|slice:":1" %}
-        <p class="activity_note container-fluid">{{activity.note}}</p>
-        <p class="activity_date">@ {{activity.when}}</p>
+        <p class="activity_note container-fluid text-left">{{activity.note}}</p>
+        <p class="activity_date text-left">@ {{activity.when}}</p>
         {% endfor %}
       </div>
     </div>
