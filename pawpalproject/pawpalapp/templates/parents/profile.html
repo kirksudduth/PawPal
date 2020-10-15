@@ -39,5 +39,14 @@
     href="{% url 'pawpalapp:add_pawpal' %}"
     >Add PawPal</a
   >
+  <div class="find_pawpal">
+    <label for="pawpals">Find PawPal</label>
+    <select id="pawpals">
+      <option value="placeholder">Find PawPal</option>
+      {% for pawpal in pawpals %}
+      <option value="pawpal">{{ pawpal }}</option>
+      {% endfor %}
+    </select>
+  </div>
 </div>
 {% endblock %}
