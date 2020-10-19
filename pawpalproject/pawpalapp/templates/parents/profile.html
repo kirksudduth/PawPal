@@ -48,6 +48,9 @@
       {% csrf_token %}
       <fieldset>
         <label for="pawpals">Find PawPal: </label>
+
+        {% comment %} the name attribute in the select element is what sends the
+        option selected to the corresponding view {% endcomment %}
         <select id="pawpals" name="pawpal">
           <option value="placeholder"></option>
           {% for pawpal in pawpals %}
