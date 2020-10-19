@@ -40,13 +40,28 @@
     >Add PawPal</a
   >
   <div class="find_pawpal">
-    <label for="pawpals">Find PawPal</label>
-    <select id="pawpals">
-      <option value="placeholder">Find PawPal</option>
-      {% for pawpal in pawpals %}
-      <option value="pawpal">{{ pawpal }}</option>
-      {% endfor %}
-    </select>
+    <form
+      type="submit"
+      action="{% url 'pawpalapp:find_pawpal' %}"
+      method="POST"
+    >
+      {% csrf_token %}
+      <fieldset>
+        <label for="pawpals">Find PawPal: </label>
+
+        {% comment %} the name attribute in the select element is what sends the
+        option selected to the corresponding view {% endcomment %}
+        <select id="pawpals" name="pawpal">
+          <option value="placeholder"></option>
+          {% for pawpal in pawpals %}
+          <option value="{{pawpal.id}}" name="id" id="{{pawpal.id}}">
+            {{ pawpal }}
+          </option>
+          {% endfor %}
+        </select>
+      </fieldset>
+      <input type="submit" class="btn btn-success" value="Add Found PawPal" />
+    </form>
   </div>
 </div>
 {% endblock %}
