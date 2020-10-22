@@ -8,6 +8,7 @@ from ...models import PawPal, ParentPawPal, Parent, ActivityType
 def create_pawpal(request):
 
     if request.method == "POST":
+        print("REQUEST.POST:", request.POST)
         form = AddPawPalForm(request.POST)
         if form.is_valid():
             form.save()

@@ -5,5 +5,5 @@ class AddPawPalForm(forms.ModelForm):
 
     class Meta:
         model = PawPal
-        fields = ['name', 'birth_date', 'favorite_treat', 'favorite_toy']
+        fields = ['name', 'birth_date', 'favorite_treat', 'favorite_toy', 'image']
 
