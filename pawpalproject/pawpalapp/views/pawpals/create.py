@@ -23,6 +23,8 @@ def create_pawpal(request):
             ParentPawPal.objects.create(pawpal=created_pawpal, parent=parent)
             return redirect("/")
 
+        # this "else" returns the user to the page with the form filled out minus the field
+        # where there was an error in the input
         else:
             return render(request, "pawpals/add.html", {'form': form})
     else:
