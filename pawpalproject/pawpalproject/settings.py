@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pawpalapp',
     'bootstrap4',
     'crispy_forms',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
