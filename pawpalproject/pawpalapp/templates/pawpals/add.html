@@ -1,7 +1,7 @@
 {% extends 'shared/base.html' %} {% block title %}Add Pawpal{% endblock %} {%
 load crispy_forms_tags %} {% block content %}
 <form method="POST" class="form-group container-fluid">
-  {{ form.as_p }}
+  {% csrf_token %} {{ form.media }} {{ form.as_p }}
   <button type="submit" class="btn btn-success container-fluid">
     Add Pawpal
   </button>
