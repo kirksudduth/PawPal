@@ -62,3 +62,8 @@ p.activity_date {
 .board {
   background-color: #f5f5f5;
 }
+
+img {
+  height: 100px;
+  width: 100px;
+}
