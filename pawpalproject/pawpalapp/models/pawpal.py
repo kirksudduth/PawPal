@@ -2,7 +2,7 @@ from django.db import models
 
 
 class PawPal(models.Model):
-    
+
     name = models.CharField(max_length=30)
     birth_date = models.DateField()
     favorite_treat = models.CharField(max_length=30)
@@ -10,4 +10,4 @@ class PawPal(models.Model):
     image = models.ImageField(upload_to='images/', null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.image.url
