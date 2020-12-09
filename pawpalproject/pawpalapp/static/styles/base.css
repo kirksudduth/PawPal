@@ -28,11 +28,6 @@ h3 {
   text-align: center;
 }
 
-h3 {
-  font-family: "Cutive Mono", serif;
-  text-align: center;
-}
-
 label,
 p,
 h4 {
@@ -66,4 +61,13 @@ p.activity_date {
 img {
   height: 100px;
   width: 100px;
+}
+
+.activity_list {
+  /* display: flex; */
+}
+
+.card {
+  margin: 5px;
+  max-width: 500px;
 }
