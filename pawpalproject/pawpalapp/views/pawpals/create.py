@@ -13,7 +13,7 @@ def create_pawpal(request):
         if form.is_valid():
             form.save()
             created_pawpal = PawPal.objects.all().last()
-            print("PAWPAL:", created_pawpal.image)
+            print("PAWPAL:", created_pawpal)
             ActivityType.objects.create(title="Feed", pawpal=created_pawpal)
             ActivityType.objects.create(title="Out", pawpal=created_pawpal)
             ActivityType.objects.create(title="Walk", pawpal=created_pawpal)
