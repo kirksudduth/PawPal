@@ -62,3 +62,12 @@ img {
   height: 100px;
   width: 100px;
 }
+
+.activity_list {
+  /* display: flex; */
+}
+
+.card {
+  margin: 5px;
+  max-width: 500px;
+}

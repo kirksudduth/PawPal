@@ -35,7 +35,7 @@
     href="{% url 'pawpalapp:add_activity_type' pawpal.id %}"
     >Add Activity Type</a
   >
-  <div class="activity_type_list container-fluid">
+  <div class="activity_type_list container-fluid activity_list">
     {% for activity_type in activity_types %}
     <div class="activity_type card container-fluid" id="{{activity_type.id}}">
       {% csrf_token %}
