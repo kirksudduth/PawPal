@@ -64,7 +64,9 @@ img {
 }
 
 .activity_list {
-  /* display: flex; */
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
 }
 
 .card {
