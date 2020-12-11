@@ -77,11 +77,14 @@ img {
 .buttons_container {
   display: flex;
   flex-direction: row;
-  border: solid red 1px;
-  /* margin: 10px; */
 }
 
 .add_message,
-.message_board {
+.to_message_board {
   max-width: 450px;
+  margin: 10px;
+}
+
+.message_board {
+  max-width: 500px;
 }
