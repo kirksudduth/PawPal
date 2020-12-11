@@ -85,6 +85,10 @@ img {
   margin: 10px;
 }
 
+.add_message:hover,
+.to_message_board:hover {
+  box-shadow: 2px 2px #004b7a;
+}
 .message_board {
   max-width: 500px;
 }
