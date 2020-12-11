@@ -10,18 +10,18 @@
       {% endfor %}
     </ul>
   </div>
-  <div class="row">
+  <div class="row buttons_container">
     <a
       button
       type="button"
-      class="btn btn-primary col"
+      class="btn btn-primary col add_message"
       href="{% url 'pawpalapp:add_message' pawpal.id %}"
       >Add Message</a
     >
     <a
       button
       type="button"
-      class="btn btn-primary col"
+      class="btn btn-primary col message_board"
       href="{% url 'pawpalapp:message_list' pawpal.id %}"
       >Go to Message Board</a
     >
