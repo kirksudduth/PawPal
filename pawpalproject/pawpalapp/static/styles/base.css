@@ -86,8 +86,13 @@ img {
 }
 
 .add_message:hover,
-.to_message_board:hover {
+.to_message_board:hover,
+.add_activity_type:hover {
   box-shadow: 2px 2px #004b7a;
+}
+
+.add_activity_type {
+  max-width: 300px;
 }
 .message_board {
   max-width: 500px;
