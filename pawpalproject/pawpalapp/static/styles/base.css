@@ -73,3 +73,15 @@ img {
   margin: 5px;
   max-width: 500px;
 }
+
+.buttons_container {
+  display: flex;
+  flex-direction: row;
+  border: solid red 1px;
+  /* margin: 10px; */
+}
+
+.add_message,
+.message_board {
+  max-width: 450px;
+}
