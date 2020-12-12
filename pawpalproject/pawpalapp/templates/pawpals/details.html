@@ -1,6 +1,7 @@
 {% extends 'shared/base.html' %} {% block content %} {% load static %}
 <h3>{{pawpal.name}}</h3>
 <img src="{{pawpal.image}}" alt="{{pawpal.name}}" ></img>
+<div class="message_board_container container-fluid">
 <div class="message_board container-fluid">
   <h4 class="messages">Messages</h4>
   <div class="messages container-fluid">
@@ -26,6 +27,7 @@
       >Go to Message Board</a
     >
   </div>
+</div>
 </div>
 <div class="container-fluid activity_types">
   <a
