@@ -21,19 +21,19 @@
     <a
       button
       type="button"
-      class="btn btn-primary col message_board"
+      class="btn btn-primary col to_message_board"
       href="{% url 'pawpalapp:message_list' pawpal.id %}"
       >Go to Message Board</a
     >
   </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid activity_types">
   <a
     button
     type="button"
-    class="btn btn-success container-fluid"
+    class="btn btn-success container-fluid add_activity_type"
     href="{% url 'pawpalapp:add_activity_type' pawpal.id %}"
-    >Add Activity Type</a
+    >Add New Activity Type</a
   >
   <div class="activity_type_list container-fluid activity_list">
     {% for activity_type in activity_types %}

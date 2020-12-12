@@ -77,11 +77,33 @@ img {
 .buttons_container {
   display: flex;
   flex-direction: row;
-  border: solid red 1px;
-  /* margin: 10px; */
 }
 
 .add_message,
-.message_board {
+.to_message_board {
   max-width: 450px;
+  margin: 10px;
+}
+
+.add_message:hover,
+.to_message_board:hover,
+.add_activity_type:hover {
+  box-shadow: 2px 2px #004b7a;
+}
+
+.activity_types {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.activity_type {
+  background: #28a745;
+}
+
+.add_activity_type {
+  max-width: 300px;
+  align-self: center;
+}
+.message_board {
+  max-width: 500px;
 }
