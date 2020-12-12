@@ -98,6 +98,7 @@ img {
 
 .activity_type {
   background: #28a745;
+  box-shadow: 2px 2px #004b7a;
 }
 
 .add_activity_type {
@@ -106,4 +107,8 @@ img {
 }
 .message_board {
   max-width: 500px;
+  border: solid white 2px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 2px 2px #004b7a;
 }
