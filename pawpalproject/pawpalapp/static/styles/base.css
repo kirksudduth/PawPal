@@ -91,8 +91,18 @@ img {
   box-shadow: 2px 2px #004b7a;
 }
 
+.activity_types {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.activity_type {
+  background: #28a745;
+}
+
 .add_activity_type {
   max-width: 300px;
+  align-self: center;
 }
 .message_board {
   max-width: 500px;
