@@ -87,7 +87,8 @@ img {
 
 .add_message:hover,
 .to_message_board:hover,
-.add_activity_type:hover {
+.add_activity_type:hover,
+.activity_type_button:hover {
   box-shadow: 2px 2px #004b7a;
 }
 
@@ -111,4 +112,14 @@ img {
   border-radius: 10px;
   background: white;
   box-shadow: 2px 2px #004b7a;
+}
+
+.activity {
+  border-radius: 10px;
+  background: white;
+  box-shadow: 2px 2px #004b7a;
+}
+
+.delete_button {
+  margin-bottom: 5px;
 }

@@ -54,7 +54,9 @@
     >
       {% csrf_token %}
       <input type="hidden" name="actual_method" value="DELETE" />
-      <button class="btn btn-danger container-fluid">Delete</button>
+      <button class="btn btn-danger container-fluid delete_button">
+        Delete
+      </button>
       <input type="hidden" name="id" value="{{activity.id}}" />
     </form>
   </div>
