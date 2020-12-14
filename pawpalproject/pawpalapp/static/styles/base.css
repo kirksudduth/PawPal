@@ -95,6 +95,12 @@ img {
 .activity_types {
   display: flex;
   flex-flow: row wrap;
+  background: #d6efff;
+  border-radius: 10px;
+  max-width: 500px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px #004b7a;
 }
 
 .activity_type {
@@ -106,11 +112,11 @@ img {
   max-width: 300px;
   align-self: center;
 }
+
 .message_board {
   max-width: 500px;
-  border: solid white 2px;
   border-radius: 10px;
-  background: white;
+  background: #d6efff;
   box-shadow: 2px 2px #004b7a;
 }
 
