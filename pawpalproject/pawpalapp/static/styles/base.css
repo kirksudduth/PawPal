@@ -116,10 +116,7 @@ img {
 
 .activity {
   border-radius: 10px;
-  background: white;
+  background: #d6efff;
   box-shadow: 2px 2px #004b7a;
-}
-
-.delete_button {
-  margin-bottom: 5px;
+  padding: 5px;
 }
