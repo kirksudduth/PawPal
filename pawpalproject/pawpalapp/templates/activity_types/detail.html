@@ -25,17 +25,15 @@
       action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
       method="POST"
       class="container-fluid"
+      id="activity_card"
     >
       {% csrf_token %}
       <fieldset>
         <label for="note">Note: </label>
-        <input
-          id="note"
-          type="text"
-          name="note"
-          value="{{ activity.note }}"
-          textarea="200"
-        />
+        <textarea id="note" type="text" name="note" form_id="activity_card">
+{{ activity.note }}
+  </textarea
+        >
       </fieldset>
       <p>@ {{activity.when}}</p>
       <input type="hidden" name="actual_method" value="PUT" />
@@ -54,7 +52,9 @@
     >
       {% csrf_token %}
       <input type="hidden" name="actual_method" value="DELETE" />
-      <button class="btn btn-danger container-fluid">Delete</button>
+      <button class="btn btn-danger container-fluid delete_button">
+        Delete
+      </button>
       <input type="hidden" name="id" value="{{activity.id}}" />
     </form>
   </div>
