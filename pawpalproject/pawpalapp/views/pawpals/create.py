@@ -9,11 +9,12 @@ from ...forms.pawpal.add_form import AddPawPalForm
 def create_pawpal(request):
 
     if request.method == "POST":
-        form = AddPawPalForm(request.POST)
+        form = AddPawPalForm(request.POST, request.FILES)
         if form.is_valid():
+            print("image:", form)
             form.save()
             created_pawpal = PawPal.objects.all().last()
-            print("PAWPAL:", created_pawpal)
+            # print("PAWPAL:", created_pawpal)
             ActivityType.objects.create(title="Feed", pawpal=created_pawpal)
             ActivityType.objects.create(title="Out", pawpal=created_pawpal)
             ActivityType.objects.create(title="Walk", pawpal=created_pawpal)
