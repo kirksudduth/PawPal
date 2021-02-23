@@ -104,6 +104,10 @@ img {
   box-shadow: 2px 2px #004b7a;
 }
 
+.activity_type:hover {
+  box-shadow: inset 1px 1px 1px 1px #000000;
+}
+
 .add_activity_type {
   max-width: 300px;
   align-self: center;
