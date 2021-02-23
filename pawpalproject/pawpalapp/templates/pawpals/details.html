@@ -1,60 +1,65 @@
 {% extends 'shared/base.html' %} {% block content %} {% load static %}
 <h3>{{pawpal.name}}</h3>
 <div class="message_board_container container-fluid">
-<div class="message_board container-fluid">
-  <h4 class="messages_h4">Messages</h4>
-  <div class="messages container-fluid">
-    <ul>
-      {% for message in messages.reverse|slice:":3" %}
-      <li>{{message.parent.user.username}}: {{message.body}}</li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="row buttons_container">
-    <a
-      button
-      type="button"
-      class="btn btn-primary col add_message"
-      href="{% url 'pawpalapp:add_message' pawpal.id %}"
-      >Add Message</a
-    >
-    <a
-      button
-      type="button"
-      class="btn btn-primary col to_message_board"
-      href="{% url 'pawpalapp:message_list' pawpal.id %}"
-      >Go to Message Board</a
-    >
-  </div>
-</div>
-</div>
-<div class="container-fluid activity_types">
-  <a
-    button
-    type="button"
-    class="btn btn-success container-fluid add_activity_type"
-    href="{% url 'pawpalapp:add_activity_type' pawpal.id %}"
-    >Add New Activity Type</a
-  >
-  <div class="activity_type_list container-fluid activity_list">
-    {% for activity_type in activity_types %}
-    <div class="activity_type card container-fluid" id="{{activity_type.id}}">
-      {% csrf_token %}
-      <form
-        action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
-        method="GET"
-      >
-        <button class="btn container-fluid activity_type_button">
-          {{activity_type.title}} {{activity_type.pawpal.name}}
-        </button>
-      </form>
-      <div class="activity_notes_list card-body container-fluid">
-        {% for activity in activity_type.activity_set.all.reverse|slice:":1" %}
-        <p class="activity_note container-fluid text-left">{{activity.note}}</p>
-        <p class="activity_date text-left">@ {{activity.when}}</p>
+  <div class="message_board container-fluid">
+    <h4 class="messages_h4">Messages</h4>
+    <div class="messages container-fluid">
+      <ul>
+        {% for message in messages.reverse|slice:":3" %}
+        <li>{{message.parent.user.username}}: {{message.body}}</li>
         {% endfor %}
-      </div>
+      </ul>
     </div>
-    {% endfor %} {% endblock %}
+    <div class="row buttons_container">
+      <a
+        button
+        type="button"
+        class="btn btn-primary col add_message"
+        href="{% url 'pawpalapp:add_message' pawpal.id %}"
+        >Add Message</a
+      >
+      <a
+        button
+        type="button"
+        class="btn btn-primary col to_message_board"
+        href="{% url 'pawpalapp:message_list' pawpal.id %}"
+        >Go to Message Board</a
+      >
+    </div>
   </div>
 </div>
+<div class="container-fluid activity_types_container">
+  <div class="container-fluid activity_types">
+    <a
+      button
+      type="button"
+      class="btn btn-success container-fluid add_activity_type"
+      href="{% url 'pawpalapp:add_activity_type' pawpal.id %}"
+      >Add New Activity Type</a
+    >
+    <div class="activity_type_list container-fluid activity_list">
+      {% for activity_type in activity_types %}
+      <div class="activity_type card container-fluid" id="{{activity_type.id}}">
+        {% csrf_token %}
+        <form
+          action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
+          method="GET"
+        >
+          <button class="btn container-fluid activity_type_button">
+            {{activity_type.title}} {{activity_type.pawpal.name}}
+          </button>
+        </form>
+        <div class="activity_notes_list card-body container-fluid">
+          {% for activity in activity_type.activity_set.all.reverse|slice:":1"%}
+          <p class="activity_note container-fluid text-left">
+            {{activity.note}}
+          </p>
+          <p class="activity_date text-left">@ {{activity.when}}</p>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
