@@ -67,7 +67,7 @@ img {
 
 .card {
   margin: 5px;
-  max-width: 500px;
+  max-width: 450px;
 }
 
 .buttons_container {
@@ -125,4 +125,26 @@ img {
   background: #d6efff;
   box-shadow: 2px 2px #004b7a;
   padding: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  .activity_types {
+    display: flex;
+    flex-flow: row wrap;
+    background: #d6efff;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px #004b7a;
+  }
+
+  .activity_types_list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    max-width: 300px;
+  }
 }
