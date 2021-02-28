@@ -48,6 +48,7 @@ small {
 .button,
 fieldset {
   margin-top: 5px;
+  align-items: center;
 }
 
 p.activity_date {
@@ -66,8 +67,9 @@ img {
 }
 
 .card {
+  flex: 65%;
   margin: 5px;
-  max-width: 450px;
+  padding: 5px;
 }
 
 .buttons_container {
@@ -127,6 +129,10 @@ img {
   padding: 5px;
 }
 
+.activity_type_button {
+  padding: 5px;
+}
+
 @media only screen and (min-width: 600px) {
   .activity_types {
     display: flex;
@@ -139,12 +145,20 @@ img {
     box-shadow: 2px 2px #004b7a;
   }
 
-  .activity_types_list {
+  .activity_list {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .card {
-    max-width: 300px;
+    flex: 30%;
+    margin: 5px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .activity_list {
+    flex-direction: column;
   }
 }

@@ -39,7 +39,7 @@
     >
     <div class="activity_type_list container-fluid activity_list">
       {% for activity_type in activity_types %}
-      <div class="activity_type card container-fluid" id="{{activity_type.id}}">
+      <div class="activity_type card" id="{{activity_type.id}}">
         {% csrf_token %}
         <form
           action="{% url 'pawpalapp:activity_type_details' activity_type.id %}"
